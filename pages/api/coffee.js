@@ -5,14 +5,9 @@ export default async (req, res) => {
     const client = await clientPromise;
     const db = client.db("fake_coffee");
 
-    const movies = await db
-      .collection("coffee")
-      .find({})
-      .sort({ metacritic: -1 })
-      .limit(10)
-      .toArray();
+    const coffee = await db.collection("coffee").find({}).toArray();
 
-    res.json(movies);
+    res.json(coffee);
   } catch (e) {
     console.error(e);
   }
