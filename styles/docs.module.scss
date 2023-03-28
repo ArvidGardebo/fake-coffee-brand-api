@@ -1,0 +1,14 @@
+@use "../styles/global.module.scss" as v;
+
+.styles {
+    p {
+        max-width: 600px;
+    }
+}
+
+.fetchMethods {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 100%;
+}
