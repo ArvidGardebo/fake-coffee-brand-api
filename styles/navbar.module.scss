@@ -1,0 +1,26 @@
+@use "../styles/global.module.scss" as v;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Permanent Marker";
+  margin-right: 20px;
+  margin-left: 20px;
+
+  .navbar__logo {
+    display: flex;
+  }
+  .navbar__list {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+  .navbar__item {
+    list-style: none;
+  }
+  .navbar__link {
+    color: v.$black_1;
+    text-decoration: none;
+  }
+}
