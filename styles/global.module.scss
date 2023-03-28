@@ -1,0 +1,16 @@
+$black_1: #000000;
+$black_2: #171717;
+$black_3: #2e2e2e;
+$black_4: #454545;
+$black_5: #5c5c5c;
+$black_6: #737373;
+$black_7: #8a8a8a;
+$yellow: #ffd100;
+
+.styles {
+  color: $yellow;
+  p {
+    font-size: 16px;
+    color: $black_3;
+  }
+}
