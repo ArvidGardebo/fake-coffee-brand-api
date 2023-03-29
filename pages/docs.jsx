@@ -1,6 +1,8 @@
 import { domainToASCII } from "url";
 import global from "../styles/global.module.scss";
 import docs from "../styles/docs.module.scss";
+import Navbar from "../components/navbar";
+import FetchMethods from "../components/fetchMethod";
 
 function Docs() {
   return (
@@ -17,12 +19,14 @@ function Docs() {
             </p>
           </div>
           <section className={docs.fetchmethods}>
-            {/* insert fetch-info component here*/}
+            <FetchMethods />
+            <FetchMethods />
+            <FetchMethods />
+            <FetchMethods />
           </section>
         </main>
       </div>
     </>
   );
 }
-
 export default Docs;
