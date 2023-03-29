@@ -15,7 +15,7 @@ export default async function updateCoffeefake(req, res) {
           .find()
           .limit(parseInt(limit))
           .toArray();
-        res.json(data);
+        res.status(200).json(data);
       }
       // Get sorted (asc / desc)
       else if (sort) {
@@ -28,7 +28,7 @@ export default async function updateCoffeefake(req, res) {
       } else {
         // Get all
         const data = await db.collection("coffee").find().toArray();
-        res.json(data);
+        res.status(200).json(data);
       }
     }
     //Update one
@@ -39,7 +39,7 @@ export default async function updateCoffeefake(req, res) {
       //   //   { name: req.body.name },
       //   //   { $set: { price: req.body.price } }
       //   // );
-      res.json({
+      res.status(200).json({
         success: true,
         message: "Update succesful",
         coffee: {
@@ -52,7 +52,7 @@ export default async function updateCoffeefake(req, res) {
       const filter = { weight: req.body.weight };
       const update = { $set: { weight: req.body.weight } };
       await db.collection("coffee").updateMany(filter, update);
-      res.json({
+      res.status(200).json({
         success: true,
         message: "Coffee updated PATCH",
       });
@@ -63,7 +63,7 @@ export default async function updateCoffeefake(req, res) {
       const result = await db
         .collection("coffee")
         .findOneAndUpdate(query, update);
-      res.json({ success: true, data: result.value });
+      res.status(200).json({ success: true, data: result.value });
     } else if (req.method === "DELETE" && req.body.name) {
       // const { id } = req.query;
       // const query = { name: req.body.name };
