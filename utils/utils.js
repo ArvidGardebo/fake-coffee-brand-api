@@ -32,46 +32,13 @@ export default async function updateCoffeefake(req, res) {
       }
     }
     //Update one
-    if (req.method === "PUT") {
-      // await db
-      //   // .collection("coffee")
-      //   // .updateOne(
-      //   //   { name: req.body.name },
-      //   //   { $set: { price: req.body.price } }
-      //   // );
-      res.status(200).json({
-        success: true,
-        message: "Update succesful",
-        coffee: {
-          name: req.body.name,
-          price: req.body.price,
-        },
-      });
-      //Update multiple
-    } else if (req.method === "PATCH") {
-      const filter = { weight: req.body.weight };
-      const update = { $set: { weight: req.body.weight } };
-      await db.collection("coffee").updateMany(filter, update);
-      res.status(200).json({
-        success: true,
-        message: "Coffee updated PATCH",
-      });
-      //Find one and Update
-    } else if (req.method === "POST") {
+    if (req.method === "POST") {
       const query = { name: req.body.name };
       const update = { $set: { id: req.body.id } };
       const result = await db
         .collection("coffee")
         .findOneAndUpdate(query, update);
       res.status(200).json({ success: true, data: result.value });
-    } else if (req.method === "DELETE" && req.body.name) {
-      // const { id } = req.query;
-      // const query = { name: req.body.name };
-      // const result = db.collection("coffee").delete(query);
-      // parseInt(id)
-      res
-        .status(200)
-        .json({ Message: "Has been deleted", Coffee: `${req.body.id}` });
     }
   } catch (e) {
     console.error(e);
