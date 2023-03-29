@@ -6,13 +6,20 @@ export default async function updateCoffeefake(req, res) {
     const db = client.db("fake_coffee");
     //Update one
     if (req.method === "PUT") {
-      await db
-        .collection("coffee")
-        .updateOne(
-          { name: req.body.name },
-          { $set: { price: req.body.price } }
-        );
-      res.json({ success: true, message: "Coffee updated PUT" });
+      // await db
+      //   // .collection("coffee")
+      //   // .updateOne(
+      //   //   { name: req.body.name },
+      //   //   { $set: { price: req.body.price } }
+      //   // );
+      res.json({
+        success: true,
+        message: "Update succesful",
+        coffee: {
+          name: req.body.name,
+          price: req.body.price,
+        },
+      });
       //Update multiple
     } else if (req.method === "PATCH") {
       const filter = { weight: req.body.weight };
@@ -25,7 +32,7 @@ export default async function updateCoffeefake(req, res) {
       //Find one and Update
     } else if (req.method === "POST") {
       const query = { name: req.body.name };
-      const update = { $set: { name: req.body.name } };
+      const update = { $set: { id: req.body.id } };
       const result = await db
         .collection("coffee")
         .findOneAndUpdate(query, update);
