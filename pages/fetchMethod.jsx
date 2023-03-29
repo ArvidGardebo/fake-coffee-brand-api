@@ -1,5 +1,6 @@
 import { useState } from "react";
 import global from "../styles/global.module.scss";
+
 function FetchMethods(props) {
   const [show, setShow] = useState(false);
   const eventHandler = () => {
