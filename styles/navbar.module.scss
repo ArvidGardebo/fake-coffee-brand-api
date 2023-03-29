@@ -10,6 +10,7 @@
 
   .navbar__logo {
     display: flex;
+    font-size: 20px;
   }
   .navbar__list {
     display: flex;
@@ -22,5 +23,9 @@
   .navbar__link {
     color: v.$black_1;
     text-decoration: none;
+    font-size: 20px;
+    a {
+      text-decoration: none;
+    }
   }
 }

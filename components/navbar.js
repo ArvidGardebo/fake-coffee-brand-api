@@ -9,23 +9,23 @@ const Navbar = () => {
         <h1>{"{ Fake Coffee API }"}</h1>
         <ul className={styles.navbar__list}>
           <li className={styles.navbar__item}>
-            <Link href="/">
-              <p className={styles.navbar__link}>Home</p>
+            <Link className={styles.navbar__link} href="/">
+              Home
             </Link>
           </li>
           <li className={styles.navbar__item}>
-            <Link href="/docs">
-              <p className={styles.navbar__link}>Docs</p>
+            <Link className={styles.navbar__link} href="/docs">
+              Docs
             </Link>
           </li>
           <li className={styles.navbar__item}>
-            <Link href="https://github.com/">
-              <p className={styles.navbar__link}>Github</p>
+            <Link className={styles.navbar__link} href="https://github.com/">
+              Github
             </Link>
           </li>
           <li className={styles.navbar__item}>
-            <Link href="">
-              <p className={styles.navbar__link}>Buy us a coffee</p>
+            <Link className={styles.navbar__link} href="">
+              Buy us a coffee
             </Link>
           </li>
         </ul>
