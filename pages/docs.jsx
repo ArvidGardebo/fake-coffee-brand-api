@@ -1,4 +1,3 @@
-
 import { domainToASCII } from "url";
 import global from "../styles/global.module.scss";
 import docs from "../styles/docs.module.scss";
@@ -6,8 +5,8 @@ import docs from "../styles/docs.module.scss";
 function Docs() {
   return (
     <>
-    <Navbar />
       <div className={`${global.styles} ${docs.styles}`}>
+        <Navbar />
         <main className={global.wrapper}>
           <div>
             <h1>HOW TO USE IT</h1>
