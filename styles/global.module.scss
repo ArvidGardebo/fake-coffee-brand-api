@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
+}
+@font-face {
+  font-family: "Permanent Marker";
+  src: url("../fonts/Permanent_Marker/PermanentMarker-Regular.ttf");
+}
+
 $black_1: #000000;
 $black_2: #171717;
 $black_3: #2e2e2e;
@@ -9,7 +18,9 @@ $yellow: #ffd100;
 
 .styles {
   color: $yellow;
+
   p {
+    font-family: "Inter";
     font-size: 16px;
     color: $black_3;
   }
