@@ -1,4 +1,5 @@
 import clientPromise from "../lib/mongodb";
+import { MongoClient } from "mongodb-legacy";
 
 export default async function updateCoffeefake(req, res) {
   try {
@@ -30,6 +31,14 @@ export default async function updateCoffeefake(req, res) {
         .collection("coffee")
         .findOneAndUpdate(query, update);
       res.json({ success: true, data: result.value });
+    } else if (req.method === "DELETE" && req.body.name) {
+      // const { id } = req.query;
+      // const query = { name: req.body.name };
+      // const result = db.collection("coffee").delete(query);
+      // parseInt(id)
+      res
+        .status(200)
+        .json({ Message: "Has been deleted", Coffee: `${req.body.id}` });
     }
   } catch (e) {
     console.error(e);
