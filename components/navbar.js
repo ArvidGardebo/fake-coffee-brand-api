@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className={styles.navbar}>
-        <h1>{"{ Fake Coffee API }"}</h1>
+        <h4>{"{ Fake Coffee API }"}</h4>
         <ul className={styles.navbar__list}>
           <li className={styles.navbar__item}>
             <Link className={styles.navbar__link} href="/">

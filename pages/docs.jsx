@@ -11,7 +11,7 @@ function Docs() {
         <Navbar />
         <main className={global.wrapper}>
           <div>
-            <h1>HOW TO USE IT</h1>
+            <h2>HOW TO USE IT</h2>
             <p>
               Chartreuse sustainable raw denim hashtag. Put a bird on it brunch
               marxism gorpcore polaroid ethical cray hashtag PBR&B offal

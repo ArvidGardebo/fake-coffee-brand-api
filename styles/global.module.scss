@@ -17,8 +17,32 @@ $black_7: #8a8a8a;
 $yellow: #ffd100;
 
 .styles {
-  color: $yellow;
+  p {
+    font-family: "Inter";
+    font-size: 16px;
+    color: $black_3;
+  }
 
+  h1 {
+    font-family: "Permanent Marker";
+    font-size: 36px;
+  }
+  h2 {
+    font-family: "Permanent Marker";
+    font-size: 32px;
+  }
+  h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  h4 {
+    font-family: "Permanent Marker";
+    font-size: 20px;
+  }
+    
   p {
     font-family: "Inter";
     font-size: 16px;
@@ -28,5 +52,28 @@ $yellow: #ffd100;
 
 .wrapper {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto;  
+}
+
+.primaryBtn {
+  padding: 10px 25px; 
+  background-color: $black_2;
+  color: white; 
+  border-radius: 3px;
+  border: 2px solid $black_2;
+
+  &:hover { color: white; 
+    background-color: transparent;
+    color: $black_2
+  }
+
+}
+.secondaryBtn {
+  @extend .primaryBtn;
+  background-color: transparent; 
+  color: $black_2;; 
+  &:hover { color: white; 
+    background-color: $black_2;
+  }
+ 
 }

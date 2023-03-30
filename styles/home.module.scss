@@ -1,0 +1,55 @@
+@use "../styles/global.module.scss" as v;
+
+.heroSection {
+    background-color: v.$yellow;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+
+    .heroContainer {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        width: 1000px;
+    }
+
+    .heroTextContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        h1 {
+            margin: 0;
+            margin-bottom: 10px;
+            line-height: 52px;
+           
+        }
+         p {
+            margin: 0;
+            margin-bottom: 48px
+        }
+        .buttonContainer {
+            display: flex;
+            gap: 16px;
+        }
+    }
+    .imgContainer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .heroImg {
+            position: relative;
+            z-index: 2
+        }
+        .swirl {
+            position: absolute;
+            left: 0;
+            top: 10%;
+            bottom: 50%;
+            height: 80%;
+        }
+    }
+}
