@@ -6,6 +6,10 @@
   font-family: "Permanent Marker";
   src: url("../fonts/Permanent_Marker/PermanentMarker-Regular.ttf");
 }
+@font-face {
+  font-family: "Fira Code";
+  src: url("../fonts/Fira_Code/FiraCode-VariableFont_wght.ttf")
+}
 
 $black_1: #000000;
 $black_2: #171717;
@@ -18,16 +22,18 @@ $grey_1: #f2f2f2;
 $yellow: #ffd100;
 
 .styles {
+  color: $black_2;
   h1 {
     font-family: "Permanent Marker";
     font-size: 36px;
   }
   h2 {
+    margin-bottom: 10px;
     font-family: "Permanent Marker";
     font-size: 32px;
   }
   h3 {
-    font-family: "Inter";
+    font-family: "Fira Code";
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -38,11 +44,14 @@ $yellow: #ffd100;
     font-size: 20px;
   }
 
-  p {
-    font-family: "Inter";
+  p, span{
+    font-family: "Fira Code";
     font-size: 16px;
     color: $black_3;
   }
+}
+.marginTop{
+  padding-top: 100px
 }
 
 .wrapper {
@@ -51,15 +60,17 @@ $yellow: #ffd100;
 }
 
 .primaryBtn {
+  font-family: "Fira Code";
   padding: 10px 25px;
   background-color: $black_2;
   color: white;
   border-radius: 3px;
   border: 2px solid $black_2;
+  text-decoration: none;
 
   &:hover {
     color: white;
-    background-color: transparent;
+    background-color: white;
     color: $black_2;
   }
 }
@@ -67,8 +78,4 @@ $yellow: #ffd100;
   @extend .primaryBtn;
   background-color: transparent;
   color: $black_2;
-  &:hover {
-    color: white;
-    background-color: $black_2;
-  }
 }

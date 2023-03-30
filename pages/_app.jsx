@@ -5,6 +5,7 @@ function MyApp({ Component, pageProps }) {
         body {
           margin: 0px;
           padding: 0px;
+          overflow-x: hidden;
         }
       `}</style>
       <Component {...pageProps} />;
