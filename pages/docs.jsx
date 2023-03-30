@@ -12,7 +12,9 @@ function Docs() {
         <main className={global.wrapper}>
           <div>
             <div className={docs.fetchMethods}>
-              <h2>HOW TO USE IT</h2>
+              <div className={docs.header_backgroundImg}>
+                <h2 className={docs.header_text}>HOW TO USE IT</h2>
+              </div>
 
               <p>
                 Chartreuse sustainable raw denim hashtag. Put a bird on it

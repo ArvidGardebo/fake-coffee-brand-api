@@ -4,6 +4,7 @@ import Navbar from "../components/navbar";
 import Image from "next/image";
 import swirl from "../assets/swirl.svg";
 import heroImg from "../assets/mockups.png";
+import docs from "../styles/docs.module.scss";
 
 function Home() {
   return (
@@ -38,7 +39,9 @@ function Home() {
           </div>
         </section>
         <section className={`${home.aboutSection}, ${global.wrapper}`}>
-          <h2>ABOUT THE API</h2>
+          <div className={docs.header_backgroundImg}>
+            <h2 className={docs.header_text}>ABOUT THE API</h2>
+          </div>
           <p>
             Hello and thank you for stopping by our documentation page for our
             fake coffee product API! Our API provides unrestricted access to a
