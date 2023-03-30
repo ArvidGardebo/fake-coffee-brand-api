@@ -7,6 +7,7 @@ export default async function updateCoffeefake(req, res) {
 
     if (req.method === "GET") {
       let { limit, sort } = req.query;
+      const query = {};
       // Get limit
       if (limit) {
         const data = await db
@@ -24,20 +25,51 @@ export default async function updateCoffeefake(req, res) {
           .sort({ name: sort == "asc" ? 1 : -1 })
           .toArray();
         res.json(data);
+      } else if (Object.keys(req.body).length > 0) {
+        if (req.body.name) query.name = req.body.name;
+        if (req.body.description) query.description = req.body.description;
+        if (req.body.price) query.price = req.body.price;
+        if (req.body.region) query.region = req.body.region;
+        if (req.body.weight) query.weight = req.body.weight;
+        if (req.body.flavor_profile)
+          query.flavor_profile = req.body.flavor_profile;
+        if (req.body.grind_option) query.grind_option = req.body.grind_option;
+        if (req.body.roast_level) query.roast_level = req.body.roast_level;
+        const result = await db.collection("coffee").find(query).toArray();
+        res.status(200).json(result);
       } else {
         // Get all
         const data = await db.collection("coffee").find().toArray();
         res.status(200).json(data);
       }
     }
+
     //Update one
-    if (req.method === "POST") {
-      const query = { name: req.body.name };
-      const update = { $set: { id: req.body.id } };
-      const result = await db
-        .collection("coffee")
-        .findOneAndUpdate(query, update);
-      res.status(200).json({ success: true, data: result.value });
+    if (req.method === "POST" && req.body.name) {
+      const {
+        name,
+        description,
+        price,
+        region,
+        weight,
+        flavor_profile,
+        grind_option,
+        roast_level,
+      } = req.body;
+      const newCoffee = {
+        _id: "6424335b59f9f6fdd657d2e1",
+        id: 21,
+        name,
+        description,
+        price,
+        region,
+        weight,
+        flavor_profile,
+        grind_option,
+        roast_level,
+      };
+
+      res.status(200).json({ success: true, added: newCoffee });
     }
   } catch (e) {
     console.error(e);

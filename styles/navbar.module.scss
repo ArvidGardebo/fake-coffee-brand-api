@@ -16,7 +16,7 @@
   margin-left: 20px;
 
   max-width: 1000px;
-  margin: 0 auto;  
+  margin: 0 auto;
 
   .navbar__logo {
     display: flex;
@@ -37,5 +37,8 @@
     a {
       text-decoration: none;
     }
+  }
+  .logo {
+    height: 7rem;
   }
 }

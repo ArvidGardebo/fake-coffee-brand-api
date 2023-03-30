@@ -4,6 +4,7 @@ import Navbar from "../components/navbar";
 import Image from "next/image";
 import swirl from "../assets/swirl.svg";
 import heroImg from "../assets/mockups.png";
+
 import arrowDown from "../assets/arrow-down.svg";
 import beans1 from "../assets/beans1.svg";
 import beans2 from "../assets/beans2.svg";
@@ -11,6 +12,9 @@ import beans3 from "../assets/beans3.svg";
 import FetchMethods from "../components/fetchMethod";
 
 import Link from "next/link";
+
+import docs from "../styles/docs.module.scss";
+
 
 function Home() {
   const handleToScroll = (e) => {
@@ -83,10 +87,13 @@ function Home() {
             alt="A cluster of illustrated beans"
           ></Image>
         </section>
+
         <div className={global.wrapper}>
           <section className={home.aboutSection} id="about">
             <div className={home.aboutTextContainer}>
-              <h2>ABOUT THE API</h2>
+                <div className={docs.header_backgroundImg}>
+            <h2 className={docs.header_text}>ABOUT THE API</h2>
+          </div>
               <p>
                 Hello and thank you for stopping by our documentation page for
                 our fake coffee product API! Our API provides unrestricted
@@ -154,6 +161,8 @@ function Home() {
             </div>
           </section>
         </div>
+
+        
       </div>
     </>
   );

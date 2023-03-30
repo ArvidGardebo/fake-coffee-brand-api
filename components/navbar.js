@@ -4,9 +4,15 @@ import styles from "../styles/navbar.module.scss";
 
 const Navbar = () => {
   return (
+
     <div className={styles.navbar}>
       <nav className={styles.navbarContainer}>
-        <h4>{"{ Fake Coffee API }"}</h4>
+        <img
+          className={styles.logo}
+          src="Fake_Api_Logo.svg"
+          alt="Logo of a coffe cup."
+        />
+
         <ul className={styles.navbar__list}>
           <li className={styles.navbar__item}>
             <Link className={styles.navbar__link} href="/">
