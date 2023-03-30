@@ -14,14 +14,11 @@ $black_4: #454545;
 $black_5: #5c5c5c;
 $black_6: #737373;
 $black_7: #8a8a8a;
+$grey_1: #f2f2f2;
 $yellow: #ffd100;
 
 .styles {
-  p {
-    font-family: "Inter";
-    font-size: 16px;
-    color: $black_3;
-  }
+
 
   h1 {
     font-family: "Permanent Marker";
@@ -44,7 +41,6 @@ $yellow: #ffd100;
   }
     
   p {
-    font-family: "Inter";
     font-size: 16px;
     color: $black_3;
   }
