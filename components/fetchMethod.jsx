@@ -23,7 +23,7 @@ function FetchMethods(props) {
             <img src={props.img_src} alt={props.img_alt} />
             <p>{props.instructions}</p>
           </div>
-          <button className={docs.show_output} onClick={eventHandler}>
+          <button className={global.secondaryBtn} onClick={eventHandler}>
             {!show ? <span>Show output</span> : <span>Hide output</span>}
           </button>
           {show ? (
