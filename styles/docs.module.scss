@@ -7,8 +7,8 @@
 }
 
 .header_text {
-  font-family: "Permanent Marker";
   max-width: 270px;
+  margin-left: 5px;
 }
 
 .fetchMethods {
@@ -44,4 +44,11 @@
 .tips {
   display: flex;
   gap: 1rem;
+}
+
+.header_backgroundImg {
+  background: url("../public/Group.svg");
+  background-repeat: no-repeat;
+  background-size: 270px;
+  background-position-y: center;
 }
