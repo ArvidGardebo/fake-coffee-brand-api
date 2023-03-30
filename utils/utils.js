@@ -1,5 +1,4 @@
 import clientPromise from "../lib/mongodb";
-import { MongoClient } from "mongodb-legacy";
 
 export default async function updateCoffeefake(req, res) {
   try {
