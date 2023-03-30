@@ -4,8 +4,8 @@ import styles from "../styles/navbar.module.scss";
 
 const Navbar = () => {
   return (
-    <div>
-      <nav className={styles.navbar}>
+    <div className={styles.navbar}>
+      <nav className={styles.navbarContainer}>
         <h4>{"{ Fake Coffee API }"}</h4>
         <ul className={styles.navbar__list}>
           <li className={styles.navbar__item}>

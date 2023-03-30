@@ -3,13 +3,14 @@ import global from "../styles/global.module.scss";
 import docs from "../styles/docs.module.scss";
 import Navbar from "../components/navbar";
 import FetchMethods from "../components/fetchMethod";
+import { homedir } from "os";
 
 function Docs() {
   return (
     <>
       <div className={`${global.styles} ${docs.styles}`}>
         <Navbar />
-        <main className={global.wrapper}>
+        <main className={`${global.wrapper} ${global.marginTop}`}>
           <div>
             <div className={docs.fetchMethods}>
               <h2>HOW TO USE IT</h2>

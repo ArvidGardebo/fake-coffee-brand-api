@@ -1,6 +1,13 @@
 @use "../styles/global.module.scss" as v;
 
+
 .navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.navbarContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,7 +24,7 @@
   }
   .navbar__list {
     display: flex;
-    gap: 20px;
+    gap: 32px;
     justify-content: flex-end;
   }
   .navbar__item {

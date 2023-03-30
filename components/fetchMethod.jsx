@@ -24,7 +24,7 @@ function FetchMethods(props) {
             <p>{props.instructions}</p>
           </div>
           <button className={global.secondaryBtn} onClick={eventHandler}>
-            {!show ? <span>Show output</span> : <span>Hide output</span>}
+            {!show ? "Show output" : "Hide output"}
           </button>
           {show ? (
             <div className={docs.background_color_textfield}>

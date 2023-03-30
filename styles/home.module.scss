@@ -1,17 +1,21 @@
 @use "../styles/global.module.scss" as v;
 
 .heroSection {
+    position: relative;
+    padding-top: 100px;
     background-color: v.$yellow;
     width: 100vw;
+    min-height: 500px;
+    height: 85vh;
     margin: 0;
     display: flex;
     justify-content: center;
-
 
     .heroContainer {
         display: grid;
         grid-template-columns: 0.8fr 1.2fr;
         width: 1000px;
+        margin-bottom: 80px;
     }
 
     .heroTextContainer {
@@ -23,7 +27,6 @@
             margin: 0;
             margin-bottom: 10px;
             line-height: 52px;
-           
         }
          p {
             margin: 0;
@@ -39,10 +42,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 90%;
+        margin: auto 0;
 
         .heroImg {
             position: relative;
-            z-index: 2
+            height: 100%;
+            width: auto;
+            z-index: 2;
         }
         .swirl {
             position: absolute;
@@ -52,4 +59,58 @@
             height: 80%;
         }
     }
+    .arrowDown {
+        position: absolute;
+        bottom: 20px;
+    }
+    .beans1 {
+        position: absolute;
+        left: 50px;
+        bottom: 50px;
+    }
+    .beans2 {
+        position: absolute;
+        right: 200px;
+        bottom: 100px;
+    }
+    .beans3 {
+        position: absolute;
+        right: 100px;
+        top: 100px;
+    }
 }
+
+.aboutSection {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-top: 32px;
+    .aboutTextContainer {
+        width: 600px;
+       }
+
+    .listContainer {
+       max-width: 600px;
+       
+       .list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        li {
+            display: flex;
+            justify-content: space-between;
+            a {
+                text-decoration: none;
+                font-family: "Fira Code";
+                color: v.$black_2;
+                font-weight: 500;
+            }
+         }
+        }
+    }
+    
+}
+
