@@ -10,8 +10,13 @@ function Docs() {
       <div className={`${global.styles} ${docs.styles}`}>
         <Navbar />
         <main className={global.wrapper}>
+
+          <div>
+            <h2>HOW TO USE IT</h2>
+
           <div className={docs.fetchMethods}>
             <h1 className={docs.header_text}>HOW TO USE IT</h1>
+
             <p>
               Chartreuse sustainable raw denim hashtag. Put a bird on it brunch
               marxism gorpcore polaroid ethical cray hashtag PBR&B offal
