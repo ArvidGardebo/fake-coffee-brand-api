@@ -11,7 +11,7 @@ function Docs() {
       <div className={`${global.styles} ${docs.styles}`}>
         <Navbar />
         <main className={`${global.wrapper} ${global.marginTop}`}>
-          <div>
+          <div className={docs.header_container}>
             <div className={docs.fetchMethods}>
               <div className={docs.header_backgroundImg}>
                 <h2 className={docs.header_text}>HOW TO USE IT</h2>

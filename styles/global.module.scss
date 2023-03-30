@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: "Fira Code";
-  src: url("../fonts/Fira_Code/FiraCode-VariableFont_wght.ttf")
+  src: url("../fonts/Fira_Code/FiraCode-VariableFont_wght.ttf");
 }
 
 $black_1: #000000;
@@ -28,7 +28,7 @@ $yellow: #ffd100;
     font-size: 36px;
   }
   h2 {
-    margin-bottom: 10px;
+    margin: 0;
     font-family: "Permanent Marker";
     font-size: 32px;
   }
@@ -44,14 +44,15 @@ $yellow: #ffd100;
     font-size: 20px;
   }
 
-  p, span{
+  p,
+  span {
     font-family: "Fira Code";
     font-size: 16px;
     color: $black_3;
   }
 }
-.marginTop{
-  padding-top: 100px
+.marginTop {
+  padding-top: 100px;
 }
 
 .wrapper {
