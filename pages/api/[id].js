@@ -6,29 +6,39 @@ export default async function getbyId(req, res) {
   const db = client.db("fake_coffee");
 
   try {
-    const { name, description, price, region, weight } = req.body;
+    const {
+      name,
+      description,
+      price,
+      region,
+      weight,
+      flavor_profile,
+      grind_option,
+      roast_level,
+    } = req.body;
 
     if (req.method === "PUT") {
       const query = {
         id: parseInt(id),
       };
       const update = {};
-      name ? (update.name = name) : null;
-      description ? (update.description = description) : null;
-      price ? (update.price = price) : null;
-      region ? (update.region = region) : null;
-      weight ? (update.weight = weight) : null;
-
+      name ? (update.name = name) : "";
+      description ? (update.description = description) : "";
+      price ? (update.price = price) : "";
+      region ? (update.region = region) : "";
+      weight ? (update.weight = weight) : "";
+      flavor_profile ? (update.flavor_profile = flavor_profile) : "";
+      grind_option ? (update.grind_option = grind_option) : "";
+      roast_level ? (update.roast_level = roast_level) : "";
       const result = await db.collection("coffee").findOne(query);
 
-      if (!original) {
+      if (!result) {
         res.status(404).json({
           message: "Coffee not found",
         });
         return;
       } else {
         const updateCoffee = {
-          ...result,
           ...update,
         };
 
@@ -49,6 +59,9 @@ export default async function getbyId(req, res) {
       price ? (update.price = price) : null;
       region ? (update.region = region) : null;
       weight ? (update.weight = weight) : null;
+      flavor_profile ? (update.flavor_profile = flavor_profile) : "";
+      grind_option ? (update.grind_option = grind_option) : "";
+      roast_level ? (update.roast_level = roast_level) : "";
       const result = await db.collection("coffee").find(query).toArray();
 
       if (result.length === 0) {
