@@ -12,26 +12,22 @@ function FetchMethods(props) {
     <>
       <div className={`${global.styles} ${docs.fetchMethods}`}>
         <div>
-          <h3>Get all products{props.title}</h3>
+          <h3>{props.title}</h3>
           <div className={docs.background_color_textfield}>
-            <p>
-              {`fetch('https://fakecoffeeapi.com/api/coffee') .then(res=>res.json()) .then(json=>console.log(json))`}
-              {props.paragraphs}
-            </p>
+            <p>{props.paragraphs_code}</p>
           </div>
+
           <div className={docs.tips}>
             <img src={props.img_src} alt={props.img_alt} />
             <p>{props.instructions}</p>
           </div>
+
           <button className={global.secondaryBtn} onClick={eventHandler}>
             {!show ? "Show output" : "Hide output"}
           </button>
           {show ? (
             <div className={docs.background_color_textfield}>
-              <p className={docs.output_textfield}>
-                Hello hello Hello hello Hello hello Hello hello Hello hello
-                Hello hello Hello hello
-              </p>
+              <p className={docs.output_textfield}>{props.code_example}</p>
             </div>
           ) : null}
         </div>
