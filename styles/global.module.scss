@@ -59,7 +59,7 @@ $yellow: #ffd100;
   max-width: 1000px;
   margin: 0 auto;
 }
-@media only screen and (max-width: 1000px) { 
+@media only screen and (max-width: 1000px) {
   .wrapper {
     max-width: 100%;
     padding: 24px;
@@ -85,4 +85,16 @@ $yellow: #ffd100;
   @extend .primaryBtn;
   background-color: transparent;
   color: $black_2;
+}
+
+@media only screen and (max-width: 300px) {
+  .header_backgroundImg {
+    background-size: 230px;
+    padding-left: 0;
+  }
+  .styles {
+    h2 {
+      font-size: 25px;
+    }
+  }
 }

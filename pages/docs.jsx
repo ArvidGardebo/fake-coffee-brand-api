@@ -29,7 +29,7 @@ function Docs() {
           <div className={docs.header_container}>
             <div className={docs.fetchMethods}>
               <div className={docs.header_backgroundImg}>
-                <h2 className={docs.header_text}>HOW TO USE IT</h2>
+                <h2>HOW TO USE IT</h2>
               </div>
 
               <p>
@@ -39,7 +39,7 @@ function Docs() {
               </p>
             </div>
           </div>
-          <section className={docs.fetchmethods}>
+          <section className={docs.fetchMethods}>
             {products.map((product, index) => (
               <FetchMethods
                 key={index}

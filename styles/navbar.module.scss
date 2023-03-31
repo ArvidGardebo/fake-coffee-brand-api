@@ -11,8 +11,6 @@
   align-items: center;
   justify-content: space-between;
   font-family: "Permanent Marker";
-  margin-right: 20px;
-  margin-left: 20px;
 
   max-width: 1000px;
   margin: 0 auto;
@@ -38,7 +36,7 @@
     }
   }
   .logo {
-    height: 7rem;
+    height: 6rem;
   }
 }
 
@@ -50,4 +48,26 @@
   height: 200px;
   margin-top: 50px;
   color: white;
+}
+@media only screen and (max-width: 700px) {
+  .navbarContainer {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    .navbar__list {
+      padding: 0;
+      gap: 16px;
+    }
+
+    .logo {
+      display: none;
+    }
+  }
+}
+@media only screen and (max-width: 473px) {
+  .navbarContainer {
+    .navbar_display_none {
+      display: none;
+    }
+  }
 }
