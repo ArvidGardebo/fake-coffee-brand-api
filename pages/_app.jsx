@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 function MyApp({ Component, pageProps }) {
   return (
     <div>
@@ -8,6 +10,13 @@ function MyApp({ Component, pageProps }) {
           overflow-x: hidden;
         }
       `}</style>
+      <Head>
+        {" "}
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        />{" "}
+      </Head>
       <Component {...pageProps} />;
     </div>
   );

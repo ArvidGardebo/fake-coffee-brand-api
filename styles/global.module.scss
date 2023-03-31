@@ -59,6 +59,13 @@ $yellow: #ffd100;
   max-width: 1000px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 1000px) { 
+  .wrapper {
+    max-width: 100%;
+    padding: 24px;
+  }
+}
+
 
 .primaryBtn {
   font-family: "Fira Code";
