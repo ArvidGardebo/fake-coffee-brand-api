@@ -1,10 +1,10 @@
 @use "global.module.scss" as v;
 
-.styles {
-  p {
-    max-width: 600px;
-  }
-}
+// .styles {
+//   p {
+//     max-width: 600px;
+//   }
+// }
 
 .header_text {
   max-width: 270px;
@@ -35,6 +35,11 @@
   border-radius: 5px;
   background-color: v.$grey_1;
   color: v.$black_2;
+
+  p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
 }
 
 // .output_textfield {

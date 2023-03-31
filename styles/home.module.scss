@@ -53,10 +53,13 @@
         }
         .swirl {
             position: absolute;
-            left: 0;
-            top: 10%;
-            bottom: 50%;
-            height: 80%;
+            max-width: 100%;
+            max-height: 100%;
+
+            // left: 0;
+            // top: 10%;
+            // bottom: 50%;
+            // height: 80%;
         }
     }
     .arrowDown {
@@ -80,13 +83,35 @@
     }
 }
 
+@media only screen and (max-width: 1050px) {
+    .heroSection {
+        padding-top: 150px;
+
+        .heroContainer {
+            margin-top: 100px;
+            display: flex;
+            gap: 32px;
+            flex-direction: column-reverse;
+
+            .heroTextContainer {
+                width: 400px;
+                margin: 0 auto;
+            }
+      }
+      .arrowDown, .beans1, .beans2, .beans3{
+        display: none;
+        }
+    }
+    
+}
+
 .aboutSection {
         display: flex;
         flex-direction: column;
         gap: 32px;
         margin-top: 32px;
     .aboutTextContainer {
-        width: 600px;
+        max-width: 600px;
        }
 
     .listContainer {
