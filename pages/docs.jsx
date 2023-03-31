@@ -43,23 +43,72 @@ function Docs() {
             {products.map((product, index) => (
               <FetchMethods
                 key={index}
-                id={product.id}
-                name={product.name}
-                description={product.description}
-                price={product.price}
-                region={product.region}
-                weight={product.weight}
-                flavor_profile={product.flavor_profile}
-                grind_option={product.grind_option}
-                roast_level={product.roast_level}
+                {...product}
+                title={product.getall}
+                code={product.getallcode}
               />
             ))}
-            <FetchMethods />
+            {products.map((product, index) => (
+              <FetchMethods
+                key={index}
+                {...product}
+                title={product.getsingle}
+                code={product.getsinglecode}
+              />
+            ))}
+            {products.map((product, index) => (
+              <FetchMethods
+                key={index}
+                {...product}
+                title={product.limit}
+                code={product.limitcode}
+              />
+            ))}
+            {products.map((product, index) => (
+              <FetchMethods
+                key={index}
+                {...product}
+                title={product.sort}
+                code={product.sortcode}
+              />
+            ))}
+            {products.map((product, index) => (
+              <FetchMethods
+                key={index}
+                text={product.id2}
+                text2={product.desc}
+                text3={product.title}
+                text4={product.newprice}
+                title={product.update}
+                code={product.updatecode}
+              />
+            ))}
+            {products.map((product, index) => (
+              <FetchMethods
+                key={index}
+                {...product}
+                title={product.add}
+                code={product.addcode}
+                img_src="Vector.svg"
+                instructions="Try this output."
+              />
+            ))}
+
+            {products.map((product, index) => (
+              <FetchMethods
+                key={index}
+                {...product}
+                title={product.delet}
+                code={product.deletecode}
+                img_src="Vector.svg"
+                instructions="Try this output."
+              />
+            ))}
+
             <FetchMethods
               img_src="Vector.svg"
               instructions="Try this output."
             />
-            <FetchMethods />
           </section>
         </main>
       </div>

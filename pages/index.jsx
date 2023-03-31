@@ -110,7 +110,6 @@ function Home() {
               </p>
             </div>
 
-            <FetchMethods />
             <div className={home.listContainer}>
               <h3>Resources</h3>
               <ul className={home.list}>
