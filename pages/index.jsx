@@ -29,7 +29,7 @@ function Home() {
   return (
     <>
       <div className={`${global.styles}`}>
-        {/* <Navbar /> */}
+        <Navbar />
         <section className={`${home.heroSection} ${global.marginTop}`}>
           <div className={home.heroContainer}>
             <div className={home.heroTextContainer}>
