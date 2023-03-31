@@ -5,8 +5,22 @@ import Navbar from "../components/navbar";
 import FetchMethods from "../components/fetchMethod";
 import { homedir } from "os";
 import { Footer } from "../components/navbar";
+import { useEffect, useState } from "react";
 
 function Docs() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/docs")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data);
+        console.log(data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+  console.log(products);
+
   return (
     <>
       <div className={`${global.styles} ${docs.styles}`}>
@@ -26,7 +40,20 @@ function Docs() {
             </div>
           </div>
           <section className={docs.fetchmethods}>
-            <FetchMethods />
+            {products.map((product, index) => (
+              <FetchMethods
+                key={index}
+                id={product.id}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                region={product.region}
+                weight={product.weight}
+                flavor_profile={product.flavor_profile}
+                grind_option={product.grind_option}
+                roast_level={product.roast_level}
+              />
+            ))}
             <FetchMethods />
             <FetchMethods
               img_src="Vector.svg"

@@ -2,7 +2,18 @@ import { useState } from "react";
 import global from "../styles/global.module.scss";
 import docs from "../styles/docs.module.scss";
 
-function FetchMethods(props) {
+function FetchMethods({
+  id,
+  name,
+  description,
+  price,
+  region,
+  weight,
+  flavor_profile,
+  grind_option,
+  roast_level,
+  ...props
+}) {
   const [show, setShow] = useState(false);
   const eventHandler = () => {
     !show ? setShow(true) : setShow(false);
@@ -27,7 +38,16 @@ function FetchMethods(props) {
           </button>
           {show ? (
             <div className={docs.background_color_textfield}>
-              <p className={docs.output_textfield}>{props.code_example}</p>
+              <p className={docs.output_textfield}></p>
+              <p>id:{id},</p>
+              <p>name:{name},</p>
+              <p>description:{description},</p>
+              <p>price:{price},</p>
+              <p>region:{region},</p>
+              <p>weight:{weight},</p>
+              <p>flavor_profile:{flavor_profile},</p>
+              <p>grind_option:{grind_option},</p>
+              <p>roast_level:{roast_level}</p>
             </div>
           ) : null}
         </div>

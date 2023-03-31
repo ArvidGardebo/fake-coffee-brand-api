@@ -1,5 +1,12 @@
 import clientPromise from "../lib/mongodb";
 
+export async function getFetchData(req, res) {
+  const client = await clientPromise;
+  const db = client.db("fake_coffee");
+  const data = await db.collection("fetches").find().toArray();
+  return res.json(data);
+}
+
 export default async function updateCoffeefake(req, res) {
   try {
     const client = await clientPromise;
@@ -24,7 +31,8 @@ export default async function updateCoffeefake(req, res) {
           .find()
           .sort({ name: sort == "asc" ? 1 : -1 })
           .toArray();
-        res.json(data);
+        res.status(200).json(data);
+        //Get item based on body sent in
       } else if (Object.keys(req.body).length > 0) {
         if (req.body.name) query.name = req.body.name;
         if (req.body.description) query.description = req.body.description;
