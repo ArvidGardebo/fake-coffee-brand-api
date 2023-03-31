@@ -4,6 +4,7 @@ import docs from "../styles/docs.module.scss";
 import Navbar from "../components/navbar";
 import FetchMethods from "../components/fetchMethod";
 import { homedir } from "os";
+import { Footer } from "../components/navbar";
 
 function Docs() {
   return (
@@ -35,6 +36,7 @@ function Docs() {
           </section>
         </main>
       </div>
+      <Footer />
     </>
   );
 }

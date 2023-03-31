@@ -1,6 +1,5 @@
 @use "../styles/global.module.scss" as v;
 
-
 .navbar {
   position: absolute;
   width: 100%;
@@ -41,4 +40,14 @@
   .logo {
     height: 7rem;
   }
+}
+
+.navbar__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: v.$black_1;
+  height: 200px;
+  margin-top: 50px;
+  color: white;
 }

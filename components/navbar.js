@@ -4,7 +4,6 @@ import styles from "../styles/navbar.module.scss";
 
 const Navbar = () => {
   return (
-
     <div className={styles.navbar}>
       <nav className={styles.navbarContainer}>
         <img
@@ -41,3 +40,11 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+export const Footer = () => {
+  return (
+    <div className={styles.navbar__footer}>
+      <h3>Placeholder</h3>
+    </div>
+  );
+};
