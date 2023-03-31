@@ -42,13 +42,22 @@
 
 .navbar__footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: v.$black_1;
   height: 200px;
   margin-top: 50px;
-  color: white;
+  color: rgba(255, 255, 255, 0.774);
+  font-family: "Permanent Marker";
+  background-color: v.$black_2;
+
+  .made_by {
+    display: flex;
+    gap: 1rem;
+    font-family: "Inter";
+  }
 }
+
 @media only screen and (max-width: 700px) {
   .navbarContainer {
     justify-content: center;
@@ -58,7 +67,6 @@
       padding: 0;
       gap: 16px;
     }
-
     .logo {
       display: none;
     }

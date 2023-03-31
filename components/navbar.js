@@ -43,10 +43,15 @@ const Navbar = () => {
 
 export default Navbar;
 
-export const Footer = () => {
+export const Footer = (props) => {
   return (
     <div className={styles.navbar__footer}>
-      <h3>Placeholder</h3>
+      <h3>Made by</h3>
+      <div className={styles.made_by}>
+        <h3>Arvid Gärdebo</h3>
+        <h3>Joel Holsner</h3>
+        <h3>Josef Abdo</h3>
+      </div>
     </div>
   );
 };
