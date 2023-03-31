@@ -28,7 +28,9 @@ const Navbar = () => {
               Github
             </Link>
           </li>
-          <li className={styles.navbar__item}>
+          <li
+            className={`${styles.navbar__item} ${styles.navbar_display_none}`}
+          >
             <Link className={styles.navbar__link} href="">
               Buy us a coffee
             </Link>

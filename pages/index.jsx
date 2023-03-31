@@ -90,9 +90,11 @@ function Home() {
 
         <div className={global.wrapper}>
           <section className={home.aboutSection} id="about">
-            <div className={home.aboutTextContainer}>
+            <div
+              className={`${home.aboutTextContainer} ${docs.header_container}`}
+            >
               <div className={docs.header_backgroundImg}>
-                <h2 className={docs.header_text}>ABOUT THE API</h2>
+                <h2>ABOUT THE API</h2>
               </div>
               <p>
                 Hello and thank you for stopping by our documentation page for
