@@ -76,7 +76,6 @@ $yellow: #ffd100;
   text-decoration: none;
 
   &:hover {
-    color: white;
     background-color: white;
     color: $black_2;
     cursor: pointer;
@@ -86,6 +85,19 @@ $yellow: #ffd100;
   @extend .primaryBtn;
   background-color: transparent;
   color: $black_2;
+}
+
+.clickedSecBtn {
+  font-family: "Fira Code";
+  padding: 10px 25px;
+  background-color: $black_2;
+  color: white;
+  border-radius: 3px;
+  border: 2px solid $black_2;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 @media only screen and (max-width: 300px) {
