@@ -78,10 +78,11 @@ export default async function updateCoffeefake(req, res) {
       };
 
       res.status(200).json({ success: true, added: newCoffee });
+    } else {
+      res.status(405).json({ success: false, message: "Method not allowed" });
     }
   } catch (e) {
     console.error(e);
     res.status(500).json({ success: false, error: e.message });
   }
-  res.status(405).json({ success: false, message: "Method not allowed" });
 }
