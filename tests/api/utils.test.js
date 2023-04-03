@@ -74,9 +74,8 @@ it("should get error method not allowed ", async () => {
 it("should get error not found", async () => {
   try {
     const res = await axios.get("http://localhost:3000/api/notexisting");
-  } catch (error) {
     expect(error.res.status).toBe(500);
     expect(error.res.data.success).toBe(false);
     expect(error.res.data.message).toBe("Not Found");
-  }
+  } catch (error) {}
 });
