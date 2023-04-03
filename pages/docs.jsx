@@ -31,9 +31,8 @@ function Docs() {
               </div>
 
               <p>
-                Chartreuse sustainable raw denim hashtag. Put a bird on it
-                brunch marxism gorpcore polaroid ethical cray hashtag PBR&B
-                offal everyday carry.
+                Below is documentation on examples to check out on how you can
+                use this fake coffee API to get the data you want, enjoy!
               </p>
             </div>
           </div>
