@@ -15,11 +15,9 @@ function Docs() {
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
-        console.log(data);
       })
       .catch((error) => console.log(error));
   }, []);
-  console.log(products);
 
   return (
     <>
@@ -29,7 +27,7 @@ function Docs() {
           <div className={docs.header_container}>
             <div className={docs.fetchMethods}>
               <div className={docs.header_backgroundImg}>
-                <h2>HOW TO USE IT</h2>
+                <h2 className={docs.header_text}>HOW TO USE IT</h2>
               </div>
 
               <p>
@@ -39,76 +37,78 @@ function Docs() {
               </p>
             </div>
           </div>
-          <section className={docs.fetchMethods}>
+          <section className={docs.fetchmethods}>
             {products.map((product, index) => (
               <FetchMethods
                 key={index}
-                {...product}
+                text={product.textall}
                 title={product.getall}
                 code={product.getallcode}
+                instructions={product.install}
+                img_src="Vector.svg"
               />
             ))}
             {products.map((product, index) => (
               <FetchMethods
                 key={index}
-                {...product}
+                text={product.text}
                 title={product.getsingle}
                 code={product.getsinglecode}
+                instructions={product.instone}
+                img_src="Vector.svg"
               />
             ))}
             {products.map((product, index) => (
               <FetchMethods
                 key={index}
-                {...product}
                 title={product.limit}
                 code={product.limitcode}
+                test={product.test}
+                instructions={product.instlimit}
+                img_src="Vector.svg"
               />
             ))}
             {products.map((product, index) => (
               <FetchMethods
                 key={index}
-                {...product}
                 title={product.sort}
                 code={product.sortcode}
+                test={product.testsort}
+                instructions={product.instsort}
+                img_src="Vector.svg"
               />
             ))}
             {products.map((product, index) => (
               <FetchMethods
                 key={index}
-                text={product.id2}
-                text2={product.desc}
-                text3={product.title}
-                text4={product.newprice}
                 title={product.update}
                 code={product.updatecode}
+                test={product.updatetest}
+                instructions={product.instupdate}
+                img_src="Vector.svg"
               />
             ))}
             {products.map((product, index) => (
               <FetchMethods
                 key={index}
-                {...product}
                 title={product.add}
                 code={product.addcode}
+                test={product.addtest}
+                instructions={product.instadd}
                 img_src="Vector.svg"
-                instructions="Try this output."
               />
             ))}
 
             {products.map((product, index) => (
               <FetchMethods
                 key={index}
-                {...product}
                 title={product.delet}
                 code={product.deletecode}
+                test={product.deletetest}
+                instructions={product.instdelete}
                 img_src="Vector.svg"
-                instructions="Try this output."
               />
             ))}
-
-            <FetchMethods
-              img_src="Vector.svg"
-              instructions="Try this output."
-            />
           </section>
         </main>
       </div>
