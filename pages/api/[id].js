@@ -49,6 +49,13 @@ export default async function getbyId(req, res) {
         });
       }
       //Update
+    } else if (req.method === "GET") {
+      const query = { id: parseInt(id) };
+      // Get one by id
+      if (query) {
+        const data = await db.collection("coffee").find(query).toArray();
+        res.status(200).json(data);
+      }
     } else if (req.method === "PATCH") {
       const query = {
         id: parseInt(id),

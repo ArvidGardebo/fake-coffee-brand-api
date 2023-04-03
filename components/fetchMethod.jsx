@@ -2,7 +2,7 @@ import { useState } from "react";
 import global from "../styles/global.module.scss";
 import docs from "../styles/docs.module.scss";
 
-function FetchMethods({ fetchProps, ...props }) {
+function FetchMethods({ ...props }) {
   const [show, setShow] = useState(false);
   const eventHandler = () => {
     !show ? setShow(true) : setShow(false);
@@ -12,9 +12,25 @@ function FetchMethods({ fetchProps, ...props }) {
     <>
       <div className={`${global.styles} ${docs.fetchMethods}`}>
         <div>
-          <h3>{props.title}</h3>
+          <h3
+            style={{
+              whiteSpace: "pre-wrap",
+              lineHeight: 2,
+              margin: "10px",
+            }}
+          >
+            {props.title}
+          </h3>
           <div className={docs.background_color_textfield}>
-            <p>{props.code}</p>
+            <p
+              style={{
+                whiteSpace: "pre-wrap",
+                lineHeight: 2,
+                margin: "10px",
+              }}
+            >
+              {props.code}
+            </p>
           </div>
 
           <div className={docs.tips}>
@@ -28,15 +44,30 @@ function FetchMethods({ fetchProps, ...props }) {
           {show ? (
             <div className={docs.background_color_textfield}>
               <p className={docs.output_textfield}></p>
-              <p>id:{props.id},</p>
-              <p>name:{props.name},</p>
-              <p>description:{props.description},</p>
-              <p>price:{props.price},</p>
-              <p>region:{props.region},</p>
-              <p>weight:{props.weight},</p>
-              <p>flavor_profile:{props.flavor_profile},</p>
-              <p>grind_option:{props.grind_option},</p>
-              <p>roast_level:{props.roast_level}</p>
+              <p
+                style={{
+                  whiteSpace: "pre-wrap",
+                  lineHeight: 2,
+
+                  margin: "10px",
+                }}
+              >
+                {props.test}
+              </p>
+              {props.test ? null : (
+                <>
+                  <p
+                    style={{
+                      whiteSpace: "pre-wrap",
+                      lineHeight: 2,
+
+                      margin: "10px",
+                    }}
+                  >
+                    {props.text}
+                  </p>
+                </>
+              )}
             </div>
           ) : null}
         </div>

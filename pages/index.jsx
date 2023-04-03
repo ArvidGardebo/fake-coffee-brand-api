@@ -43,7 +43,7 @@ function Home() {
                   Read Docs
                 </Link>
                 <Link
-                  href="/https://github.com/"
+                  href="/https:/github.com/"
                   className={global.secondaryBtn}
                 >
                   View GitHub
