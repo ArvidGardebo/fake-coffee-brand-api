@@ -22,7 +22,7 @@ function Docs() {
   return (
     <>
       <div className={`${global.styles} ${docs.styles}`}>
-        <Navbar />
+        <Navbar url="Fake_Api_Logo_white.gif" />
         <main className={`${global.wrapper} ${global.marginTop}`}>
           <div className={docs.header_container}>
             <div className={docs.fetchMethods}>
