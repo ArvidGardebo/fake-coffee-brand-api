@@ -49,7 +49,6 @@ const Slider = (props) => {
     emblaApi.on("reInit", onSelect);
   }, [emblaApi, setScrollSnaps, onSelect]);
 
-  console.log(slides);
   return (
     <>
       <div className="embla">
