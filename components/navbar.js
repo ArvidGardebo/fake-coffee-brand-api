@@ -8,7 +8,7 @@ const Navbar = (props) => {
       <nav className={styles.navbarContainer}>
         <img
           className={styles.logo}
-          src={props.url}
+          src={props.src}
           alt="Logo of a coffe cup."
         />
 
@@ -48,10 +48,10 @@ export const Footer = (props) => {
     <div className={styles.navbar__footer}>
       <div className={styles.footer_icons}>
         <div className={styles.footer_built_with}>Built with</div>
-        <img src="React.svg" />
-        <img src="typescript.svg" />
-        <img src="MongoDb.svg" />
-        <img src="nextjs.svg" />
+        <img src="React.svg" alt="React logo" />
+        <img src="typescript.svg" alt="Typescript logo" />
+        <img src="MongoDb.svg" alt="MongoDB logo" />
+        <img src="nextjs.svg" alt="Next js Logo" />
       </div>
 
       <div className={styles.footer_text}>

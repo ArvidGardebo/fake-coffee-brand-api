@@ -11,6 +11,7 @@ import beans1 from "../assets/beans1.svg";
 import beans2 from "../assets/beans2.svg";
 import beans3 from "../assets/beans3.svg";
 import FetchMethods from "../components/fetchMethod";
+import Head from "next/head";
 
 import Link from "next/link";
 
@@ -28,8 +29,11 @@ function Home() {
   };
   return (
     <>
+      <Head>
+        <title>Fake Coffee Api</title>
+      </Head>
       <div className={`${global.styles}`}>
-        <Navbar url="Fake_Api_Logo_yellow.gif" />
+        <Navbar src="Fake_Api_Logo_yellow.gif" />
         <section className={`${home.heroSection} ${global.marginTop}`}>
           <div className={home.heroContainer}>
             <div className={home.heroTextContainer}>

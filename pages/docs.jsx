@@ -6,6 +6,7 @@ import FetchMethods from "../components/fetchMethod";
 import { homedir } from "os";
 import { Footer } from "../components/navbar";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 function Docs() {
   const [products, setProducts] = useState([]);
@@ -21,8 +22,11 @@ function Docs() {
 
   return (
     <>
+      <Head>
+        <title>Fake Coffee Api</title>
+      </Head>
       <div className={`${global.styles} ${docs.styles}`}>
-        <Navbar url="Fake_Api_Logo_white.gif" />
+        <Navbar src="Fake_Api_Logo_white.gif" />
         <main className={`${global.wrapper} ${global.marginTop}`}>
           <div className={docs.header_container}>
             <div className={docs.fetchMethods}>
@@ -45,6 +49,7 @@ function Docs() {
                 code={product.getallcode}
                 instructions={product.install}
                 img_src="Vector.svg"
+                img_alt="A lightning bolt"
               />
             ))}
             {products.map((product, index) => (
@@ -55,6 +60,7 @@ function Docs() {
                 code={product.getsinglecode}
                 instructions={product.instone}
                 img_src="Vector.svg"
+                img_alt="A lightning bolt"
               />
             ))}
             {products.map((product, index) => (
@@ -65,6 +71,7 @@ function Docs() {
                 test={product.test}
                 instructions={product.instlimit}
                 img_src="Vector.svg"
+                img_alt="A lightning bolt"
               />
             ))}
             {products.map((product, index) => (
@@ -75,6 +82,7 @@ function Docs() {
                 test={product.testsort}
                 instructions={product.instsort}
                 img_src="Vector.svg"
+                img_alt="A lightning bolt"
               />
             ))}
             {products.map((product, index) => (
@@ -85,6 +93,7 @@ function Docs() {
                 test={product.updatetest}
                 instructions={product.instupdate}
                 img_src="Vector.svg"
+                img_alt="A lightning bolt"
               />
             ))}
             {products.map((product, index) => (
@@ -95,6 +104,7 @@ function Docs() {
                 test={product.addtest}
                 instructions={product.instadd}
                 img_src="Vector.svg"
+                img_alt="A lightning bolt"
               />
             ))}
 
@@ -106,6 +116,7 @@ function Docs() {
                 test={product.deletetest}
                 instructions={product.instdelete}
                 img_src="Vector.svg"
+                img_alt="A lightning bolt"
               />
             ))}
           </section>
