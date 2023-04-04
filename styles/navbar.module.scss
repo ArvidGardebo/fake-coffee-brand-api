@@ -41,15 +41,36 @@
 }
 
 .navbar__footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 200px;
   margin-top: 50px;
   color: rgba(255, 255, 255, 0.774);
   font-family: "Permanent Marker";
   background-color: v.$black_2;
+  display: grid;
+  grid-template-columns: 100px 150px auto 150px 100px;
+  grid-template-rows: auto;
+  align-content: space-around;
+  justify-items: center;
+  align-items: center;
+
+  .footer_icons {
+    grid-column: 2 / span 1;
+    .footer_built_with {
+      padding-left: 10px;
+      font-family: "Fira Code";
+      font-size: 10px;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      padding: 7px;
+    }
+  }
+
+  .footer_text {
+    grid-column: 3 / span 1;
+    text-align: center;
+  }
 
   .made_by {
     display: flex;
@@ -69,6 +90,22 @@
     }
     .logo {
       display: none;
+    }
+  }
+
+  .navbar__footer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .footer_icons {
+      text-align: center;
+      padding: 0;
+    }
+
+    .footer_text {
+      text-align: center;
+      font-size: 10px;
     }
   }
 }

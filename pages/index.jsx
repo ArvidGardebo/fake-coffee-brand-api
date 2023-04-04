@@ -4,13 +4,14 @@ import Navbar from "../components/navbar";
 import { Footer } from "../components/navbar";
 import Image from "next/image";
 import swirl from "../assets/swirl.svg";
-import heroImg from "../assets/mockups.png";
+import heroImg from "../public/Frame _58.png";
 
 import arrowDown from "../assets/arrow-down.svg";
 import beans1 from "../assets/beans1.svg";
 import beans2 from "../assets/beans2.svg";
 import beans3 from "../assets/beans3.svg";
 import FetchMethods from "../components/fetchMethod";
+import Head from "next/head";
 
 import Slider from "../components/slider/slider";
 const OPTIONS = {};
@@ -35,8 +36,11 @@ function Home() {
 
   return (
     <>
+      <Head>
+        <title>Fake Coffee Api</title>
+      </Head>
       <div className={`${global.styles}`}>
-        <Navbar />
+        <Navbar src="Fake_Api_Logo_yellow.gif" />
         <section className={`${home.heroSection} ${global.marginTop}`}>
           <div className={home.heroContainer}>
             <div className={home.heroTextContainer}>
@@ -50,7 +54,7 @@ function Home() {
                   Read Docs
                 </Link>
                 <Link
-                  href="/https:/github.com/"
+                  href="https://github.com/"
                   className={global.secondaryBtn}
                 >
                   View GitHub

@@ -38,7 +38,10 @@ function FetchMethods({ ...props }) {
             <p>{props.instructions}</p>
           </div>
 
-          <button className={global.secondaryBtn} onClick={eventHandler}>
+          <button
+            className={!show ? global.secondaryBtn : global.clickedSecBtn}
+            onClick={eventHandler}
+          >
             {!show ? "Show output" : "Hide output"}
           </button>
           {show ? (
