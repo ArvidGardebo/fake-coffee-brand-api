@@ -11,6 +11,7 @@ const Slider = (props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
@@ -30,6 +31,7 @@ const Slider = (props) => {
       .then((res) => res.json())
       .then((data) => {
         setData(data);
+        setIsLoading(false);
       })
       .catch((error) => console.log(error));
   }, []);
@@ -48,6 +50,10 @@ const Slider = (props) => {
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
   }, [emblaApi, setScrollSnaps, onSelect]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
