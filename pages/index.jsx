@@ -4,7 +4,7 @@ import Navbar from "../components/navbar";
 import { Footer } from "../components/navbar";
 import Image from "next/image";
 import swirl from "../assets/swirl.svg";
-import heroImg from "../assets/mockups.png";
+import heroImg from "../public/Frame _58.png";
 
 import arrowDown from "../assets/arrow-down.svg";
 import beans1 from "../assets/beans1.svg";
