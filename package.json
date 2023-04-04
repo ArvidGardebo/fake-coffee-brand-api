@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "embla-carousel-react": "^7.1.0",
     "mongodb": "^4.8.1",
     "mongodb-legacy": "^5.0.0",
     "next": "latest",

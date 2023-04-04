@@ -1,4 +1,6 @@
 import Head from "next/head";
+import "../styles/slider/sandbox.css";
+import "../styles/slider/embla.css";
 
 function MyApp({ Component, pageProps }) {
   return (

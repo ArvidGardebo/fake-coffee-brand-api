@@ -12,8 +12,12 @@ import beans2 from "../assets/beans2.svg";
 import beans3 from "../assets/beans3.svg";
 import FetchMethods from "../components/fetchMethod";
 
-import Link from "next/link";
+import Slider from "../components/slider/slider";
+const OPTIONS = {};
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
+import Link from "next/link";
 import docs from "../styles/docs.module.scss";
 
 function Home() {
@@ -26,6 +30,9 @@ function Home() {
       behavior: "smooth",
     });
   };
+
+  const slides = [{ name: 1 }, { name: 2 }, { name: 3 }];
+
   return (
     <>
       <div className={`${global.styles}`}>
@@ -108,6 +115,12 @@ function Home() {
                 who want to develop an e-commerce or cafe website prototype.
                 Happy coding!
               </p>
+            </div>
+
+            <div className="sandbox">
+              <div className="sandbox__carousel">
+                <Slider slides={SLIDES} options={OPTIONS} />
+              </div>
             </div>
 
             <div className={home.listContainer}>
