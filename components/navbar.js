@@ -57,9 +57,9 @@ export const Footer = (props) => {
       <div className={styles.footer_text}>
         <h3>Made by</h3>
         <div className={styles.made_by}>
-          <h3>Arvid Gärdebo</h3>
-          <h3>Joel Holsner</h3>
-          <h3>Josef Abdo</h3>
+          <span>Arvid Gärdebo</span>
+          <span>Joel Holsner</span>
+          <span>Josef Abdo</span>
         </div>
       </div>
     </div>

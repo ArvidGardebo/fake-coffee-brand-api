@@ -113,17 +113,45 @@ function Home() {
                 Happy coding!
               </p>
             </div>
-
+            <FetchMethods
+              title="Get all products."
+              code={`
+  fetch('localhost:3000/api',
+       .then((res) => res.json()),
+       .then((data) => console.log(data));`}
+              test={`
+              [
+                {
+                id:1,
+                name:...,
+                description:...,
+                price:...,
+                region:...,
+                weight:...,
+                flavor_profile:...,
+                grind_option:...,
+                roast_level:...,
+                },
+                }
+                {
+                id:2,
+                name:...,
+                description:...,
+                price:...,
+                region:...,
+                weight:...,
+                flavor_profile:...,
+                grind_option:...,
+                roast_level:...,
+                }
+              ]`}
+            />
             <div className={home.listContainer}>
               <h3>Resources</h3>
               <ul className={home.list}>
                 <li>
                   <span>Products</span>
                   <a href="">20 Coffee Items</a>
-                </li>
-                <li>
-                  <span>Categories</span>
-                  <a href="">4 Categories</a>
                 </li>
               </ul>
             </div>
