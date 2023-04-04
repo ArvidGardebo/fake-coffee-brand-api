@@ -23,6 +23,7 @@ export default async function updateCoffeefake(req, res) {
           .limit(parseInt(limit))
           .toArray();
         res.status(200).json(data);
+        return;
       }
       // Get sorted (asc / desc)
       else if (sort) {
@@ -32,6 +33,7 @@ export default async function updateCoffeefake(req, res) {
           .sort({ name: sort == "asc" ? 1 : -1 })
           .toArray();
         res.status(200).json(data);
+        return;
         //Get item based on body sent in
       } else if (Object.keys(req.body).length > 0) {
         if (req.body.name) query.name = req.body.name;
@@ -45,10 +47,12 @@ export default async function updateCoffeefake(req, res) {
         if (req.body.roast_level) query.roast_level = req.body.roast_level;
         const result = await db.collection("coffee").find(query).toArray();
         res.status(200).json(result);
+        return;
       } else {
         // Get all
         const data = await db.collection("coffee").find().toArray();
         res.status(200).json(data);
+        return;
       }
     }
 
@@ -78,11 +82,15 @@ export default async function updateCoffeefake(req, res) {
       };
 
       res.status(200).json({ success: true, added: newCoffee });
+
+      return;
     } else {
       res.status(405).json({ success: false, message: "Method not allowed" });
+      return;
     }
   } catch (e) {
     console.error(e);
     res.status(500).json({ success: false, error: e.message });
+    return;
   }
 }

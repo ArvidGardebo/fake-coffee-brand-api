@@ -13,8 +13,12 @@ import beans3 from "../assets/beans3.svg";
 import FetchMethods from "../components/fetchMethod";
 import Head from "next/head";
 
-import Link from "next/link";
+import Slider from "../components/slider/slider";
+const OPTIONS = {};
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
+import Link from "next/link";
 import docs from "../styles/docs.module.scss";
 
 function Home() {
@@ -27,6 +31,9 @@ function Home() {
       behavior: "smooth",
     });
   };
+
+  const slides = [{ name: 1 }, { name: 2 }, { name: 3 }];
+
   return (
     <>
       <Head>
@@ -113,6 +120,7 @@ function Home() {
                 Happy coding!
               </p>
             </div>
+
             <FetchMethods
               title="Get all products."
               code={`
@@ -146,6 +154,13 @@ function Home() {
                 }
               ]`}
             />
+
+            <div className="sandbox">
+              <div className="sandbox__carousel">
+                <Slider slides={SLIDES} options={OPTIONS} />
+              </div>
+            </div>
+
             <div className={home.listContainer}>
               <h3>Resources</h3>
               <ul className={home.list}>
