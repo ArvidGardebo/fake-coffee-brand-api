@@ -10,7 +10,7 @@ module.exports = {
     return [
       {
         source: "/static/:path*",
-        destination: `/${process.env.NEXT_PUBLIC_STATIC_FOLDER}/:path*`,
+        destination: `${process.env.NEXT_PUBLIC_STATIC_FOLDER}/:path*`,
       },
     ];
   },
