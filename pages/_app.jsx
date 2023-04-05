@@ -13,11 +13,11 @@ function MyApp({ Component, pageProps }) {
         }
       `}</style>
       <Head>
-        {" "}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />{" "}
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"
-        />{" "}
+          name="description"
+          content="API page that let users get access to data about fake coffee products and information on how to use it"
+        />
       </Head>
       <Component {...pageProps} />
     </div>
