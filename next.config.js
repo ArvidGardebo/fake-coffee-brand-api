@@ -8,16 +8,12 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
 
-  async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: "https://fake-coffee-brand-api.vercel.app/:path*",
-      },
-      {
-        source: "/static/:path*",
-        destination: "/fake-coffee-brand-api/static/:path*",
-      },
-    ];
-  },
+  //   async rewrites() {
+  //     return [
+  //       {
+  //         source: "/static/:path*",
+  //         destination: "/fake-coffee-brand-api/static/:path*",
+  //       },
+  //     ];
+  //   },
 };
