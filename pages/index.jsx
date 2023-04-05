@@ -125,9 +125,9 @@ function Home() {
             <FetchMethods
               title="Get all products."
               code={`
-  fetch('localhost:3000/api',
-       .then((res) => res.json()),
-       .then((data) => console.log(data));`}
+              fetch("https://fake-coffee-brand-api.vercel.app/api")
+              .then((res) => res.json())
+              .then((data) => console.log(data));`}
               test={`
               [
                 {
