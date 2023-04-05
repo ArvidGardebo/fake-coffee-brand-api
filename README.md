@@ -1,82 +1,173 @@
-## Example app using MongoDB
+## Fake Coffee Api
 
-[MongoDB](https://www.mongodb.com/) is a general purpose, document-based, distributed database built for modern application developers and for the cloud era. This example will show you how to connect to and use MongoDB as your backend for your Next.js app.
+Fake coffee api is a free online REST API that you can use whenever you need Pseudo-real data without running any server-side code. It's awesome for teaching purposes, sample codes, tests, coffee website etc.
 
-If you want to learn more about MongoDB, visit the following pages:
+## Resources
 
-- [MongoDB Atlas](https://mongodb.com/atlas)
-- [MongoDB Documentation](https://docs.mongodb.com/)
+Our fake coffee api products
 
-## Deploy your own
-
-Once you have access to the environment variables you'll need, deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?project-name=with-mongodb&repository-name=with-mongodb&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-mongodb&integration-ids=oac_jnzmjqM10gllKmSrG0SGrHOH)
+- Products https://https://fake-coffee-brand-api.vercel.app/api
 
 ## How to use
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+You can fetch data by using..
 
-```bash
-npx create-next-app --example with-mongodb with-mongodb-app
+### Get all products
+
+```js
+fetch("https://fake-coffee-brand-api.vercel.app/api")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
 ```
 
-```bash
-yarn create next-app --example with-mongodb with-mongodb-app
+### Get a single product
+
+```js
+fetch("https://fake-coffee-brand-api.vercel.app/api/1")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
 ```
 
-```bash
-pnpm create next-app --example with-mongodb with-mongodb-app
+### Limit results
+
+```js
+fetch("https://fake-coffee-brand-api.vercel.app/api?limit=2")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
 ```
 
-## Configuration
+### Sort results
 
-### Set up a MongoDB database
+sort in descending order
 
-Set up a MongoDB database either locally or with [MongoDB Atlas for free](https://mongodb.com/atlas).
-
-### Set up environment variables
-
-Copy the `env.local.example` file in this directory to `.env.local` (which will be ignored by Git):
-
-```bash
-cp .env.local.example .env.local
+```js
+fetch("https://fake-coffee-brand-api.vercel.app/api?sort=desc")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
 ```
 
-Set each variable on `.env.local`:
+sort in ascending order
 
-- `MONGODB_URI` - Your MongoDB connection string. If you are using [MongoDB Atlas](https://mongodb.com/atlas) you can find this by clicking the "Connect" button for your cluster.
-
-### Run Next.js in development mode
-
-```bash
-npm install
-npm run dev
-
-# or
-
-yarn install
-yarn dev
+```js
+fetch("https://fake-coffee-brand-api.vercel.app/api?sort=asc")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
 ```
 
-Your app should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
+### Update a product
 
-You will either see a message stating "You are connected to MongoDB" or "You are NOT connected to MongoDB". Ensure that you have provided the correct `MONGODB_URI` environment variable.
+```js
+fetch("https://fake-coffee-brand-api.vercel.app/api/1", {
+  method: "PUT",
+  body: JSON.stringify({
+    name: "Golden sunset",
+    description: "A lovely taste of the sun",
+    price: 99.99,
+    region: "Africa",
+  }),
+})
+  .then((res) => res.json())
+  .then((data) => console.log(data));
 
-When you are successfully connected, you can refer to the [MongoDB Node.js Driver docs](https://mongodb.github.io/node-mongodb-native/3.4/tutorials/collections/) for further instructions on how to query your database.
+OR;
 
-## Deploy on Vercel
+fetch("https://fake-coffee-brand-api.vercel.app/api/1", {
+  method: "PATCH",
+  body: JSON.stringify({
+    name: "Golden sunset",
+    descriptop: "A lovely taste of the sun",
+    price: 99.99,
+    region: "Africa",
+  }),
+})
+  .then((res) => res.json())
+  .then((data) => console.log(data));
 
-You can deploy this app to the cloud with [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+/* will return
+{
+id:5,
+name: 'new name',
+description: 'new description'
+price: 'new price',
+region: 'new region'
+}
+*/
+```
 
-#### Deploy Your Local Project
+Note: Edited data will not really be updated into the database.
 
-To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and [import to Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example).
+### Add new product
 
-**Important**: When you import your project on Vercel, make sure to click on **Environment Variables** and set them to match your `.env.local` file.
+```js
+fetch("https://fake-coffee-brand-api.vercel.app/api", {
+  method: "POST",
+  body: JSON.stringify({
+    name: "Heavenly Spice",
+    description: "Comforting",
+    price: 89.99,
+    region: "South Asia",
+  }),
+})
+  .then((res) => res.json())
+  .then((data) => console.log(data));
 
-#### Deploy from Our Template
+/* will return
+{
+id:21,
+name:'Heavenly Spice',
+description:'Comforting',
+price:89.99,
+region:'South Asia'
+}
+*/
+```
 
-Alternatively, you can deploy using our template by clicking on the Deploy button below.
+Note: Posted data will not really insert into the database and just return a fake id.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?project-name=with-mongodb&repository-name=with-mongodb&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-mongodb&integration-ids=oac_jnzmjqM10gllKmSrG0SGrHOH)
+### Delete a product
+
+```js
+fetch('https://fake-coffee-brand-api.vercel.app/api/1,{method:"DELETE"}')
+  .then((res) => res.json())
+  .then((data) => console.log(data));
+```
+
+Nothing will delete on the database.
+
+## All available routes
+
+### Products
+
+```js
+{
+
+    id:Number,
+    name:String,
+    description:String,
+    price:Number,
+    region:String,
+    weight:Number,
+    flavor_profile:Array,
+    grind_option:Array,
+    roast_level:Number,
+}
+```
+
+### GET
+
+- /api (get all products)
+- /api/1 (get specific product based on id)
+- /api?limit=5 (limit return results )
+- /api?sort=desc (asc or desc get products in ascending or descending orders)
+
+### PUT/PATCH
+
+- api/1
+
+### POST
+
+- api
+
+### DELETE
+
+-api/1
