@@ -116,6 +116,11 @@ function Home() {
                 Happy coding!
               </p>
             </div>
+            <div className="sandbox">
+              <div className="sandbox__carousel">
+                <Slider slides={SLIDES} options={OPTIONS} />
+              </div>
+            </div>
 
             <FetchMethods
               title="Get all products."
@@ -153,12 +158,6 @@ function Home() {
               img_alt="Lightning Bolt"
               instructions="Example on how to fetch."
             />
-
-            <div className="sandbox">
-              <div className="sandbox__carousel">
-                <Slider slides={SLIDES} options={OPTIONS} />
-              </div>
-            </div>
 
             <div className={home.listContainer}>
               <h3>Resources</h3>
