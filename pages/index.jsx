@@ -71,6 +71,7 @@ function Home() {
                 className={home.swirl}
                 src={swirl}
                 alt="Background swirl"
+                priority={true}
               ></Image>
             </div>
           </div>
@@ -153,6 +154,9 @@ function Home() {
                 roast_level:...,
                 }
               ]`}
+              img_src="Vector.svg"
+              img_alt="Lightning Bolt"
+              instructions="Example on how to fetch."
             />
 
             <div className="sandbox">

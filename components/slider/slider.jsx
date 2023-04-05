@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { DotButton, PrevButton, NextButton } from "./sliderArrowsDotsButtons";
+import { PrevButton, NextButton } from "./sliderArrowsDotsButtons";
 import imageByIndex from "./imageByIndex";
 
 const Slider = (props) => {
@@ -19,10 +19,6 @@ const Slider = (props) => {
   );
   const scrollNext = useCallback(
     () => emblaApi && emblaApi.scrollNext(),
-    [emblaApi]
-  );
-  const scrollTo = useCallback(
-    (index) => emblaApi && emblaApi.scrollTo(index),
     [emblaApi]
   );
 
@@ -121,16 +117,6 @@ const Slider = (props) => {
 
         <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
         <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
-      </div>
-
-      <div className="embla__dots">
-        {scrollSnaps.map((_, index) => (
-          <DotButton
-            key={index}
-            selected={index === selectedIndex}
-            onClick={() => scrollTo(index)}
-          />
-        ))}
       </div>
     </>
   );

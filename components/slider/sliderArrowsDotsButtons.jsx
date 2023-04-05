@@ -1,17 +1,5 @@
 import React from "react";
 
-export const DotButton = (props) => {
-  const { selected, onClick } = props;
-
-  return (
-    <button
-      className={"embla__dot".concat(selected ? " embla__dot--selected" : "")}
-      type="button"
-      onClick={onClick}
-    />
-  );
-};
-
 export const PrevButton = (props) => {
   const { enabled, onClick } = props;
 
@@ -21,6 +9,7 @@ export const PrevButton = (props) => {
       button="true"
       onClick={onClick}
       disabled={!enabled}
+      aria-label="Previus slide"
     >
       <svg
         width="44"
@@ -49,6 +38,7 @@ export const NextButton = (props) => {
       button="true"
       onClick={onClick}
       disabled={!enabled}
+      aria-label="Next slide"
     >
       <svg
         width="43"

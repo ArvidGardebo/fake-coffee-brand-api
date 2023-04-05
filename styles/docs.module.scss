@@ -1,28 +1,11 @@
 @use "global.module.scss" as v;
 
-// .styles {
-//   p {
-//     max-width: 600px;
-//   }
-// }
-
 .fetchMethods {
   display: flex;
   flex-direction: column;
   margin-bottom: 48px;
   max-width: 100%;
 }
-
-// .show_output {
-//   padding: 10px 25px;
-//   background-color: white;
-//   border-radius: 3px;
-// }
-
-// .show_output:hover {
-//   color: white;
-//   background-color: v.$black_2;
-// }
 
 .background_color_textfield {
   padding: 1rem 2rem;
@@ -36,10 +19,6 @@
     overflow-wrap: break-word;
   }
 }
-
-// .output_textfield {
-//   padding: 1rem;
-// }
 
 .tips {
   display: flex;
