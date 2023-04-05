@@ -1,10 +1,9 @@
+require("dotenv").config();
 process.env.NODE_ENV = "development";
 
 const axios = require("axios");
-import { updateCoffeefake } from "../../utils/utils";
 import { MongoClient } from "mongodb";
 import _interopRequireDefault from "@babel/runtime/helpers/interopRequireDefault";
-import { describe } from "node:test";
 
 let connection;
 let db;
