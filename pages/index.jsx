@@ -116,6 +116,11 @@ function Home() {
                 Happy coding!
               </p>
             </div>
+            <div className="sandbox">
+              <div className="sandbox__carousel">
+                <Slider slides={SLIDES} options={OPTIONS} />
+              </div>
+            </div>
 
             <FetchMethods
               title="Get all products."
@@ -154,12 +159,6 @@ function Home() {
               instructions="Example on how to fetch."
             />
 
-            <div className="sandbox">
-              <div className="sandbox__carousel">
-                <Slider slides={SLIDES} options={OPTIONS} />
-              </div>
-            </div>
-
             <div className={home.listContainer}>
               <h3>Resources</h3>
               <ul className={home.list}>
@@ -174,35 +173,51 @@ function Home() {
               <ul className={home.list}>
                 <li>
                   <span>GET</span>
-                  <a href="">/api</a>
+                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api">
+                    /api
+                  </a>
                 </li>
                 <li>
                   <span>GET</span>
-                  <a href="">/api/1</a>
+                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api/1">
+                    /api/1
+                  </a>
                 </li>
                 <li>
                   <span>GET</span>
-                  <a href="">/api?limit=5</a>
+                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api?limit=5">
+                    /api?limit=5
+                  </a>
                 </li>
                 <li>
                   <span>GET</span>
-                  <a href="">/api?sort=asc</a>
+                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api?sort=asc">
+                    /api?sort=asc
+                  </a>
                 </li>
                 <li>
                   <span>POST</span>
-                  <a href="">/api</a>
+                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api">
+                    /api
+                  </a>
                 </li>
                 <li>
                   <span>PUT</span>
-                  <a href="">/api/1</a>
+                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api/1">
+                    /api/1
+                  </a>
                 </li>
                 <li>
                   <span>PATCH</span>
-                  <a href="">/api/1</a>
+                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api/1">
+                    /api/1
+                  </a>
                 </li>
                 <li>
                   <span>DELETE</span>
-                  <a href="">/api/1</a>
+                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api/1">
+                    /api/1
+                  </a>
                 </li>
               </ul>
             </div>
