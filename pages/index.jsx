@@ -205,7 +205,7 @@ function Home() {
                 </li>
                 <li>
                   <span>DELETE</span>
-                  <a href="hhttps://fake-coffe-api.vercel.app/api/1">/api/1</a>
+                  <a href="https://fake-coffe-api.vercel.app/api/1">/api/1</a>
                 </li>
               </ul>
             </div>
