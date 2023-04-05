@@ -1,7 +1,7 @@
 const path = require("path");
 module.exports = {
   publicRuntimeConfig: {
-    // staticFolder: "/static",a
+    // staticFolder: "/static",
     distDir: "build",
   },
   sassOptions: {
