@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
           name="description"
           content="API page that let users get access to data about fake coffee products and information on how to use it"
         />
+        <title>Fake Coffee Api</title>
       </Head>
       <Component {...pageProps} />
     </div>

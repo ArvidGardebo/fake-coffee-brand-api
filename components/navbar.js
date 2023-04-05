@@ -30,11 +30,7 @@ const Navbar = (props) => {
           </li>
           <li
             className={`${styles.navbar__item} ${styles.navbar_display_none}`}
-          >
-            <Link className={styles.navbar__link} href="">
-              Buy us a coffee
-            </Link>
-          </li>
+          ></li>
         </ul>
       </nav>
     </div>

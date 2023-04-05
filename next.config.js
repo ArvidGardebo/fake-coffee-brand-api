@@ -8,6 +8,7 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
 
+<<<<<<< HEAD
   //   async rewrites() {
   //     return [
   //       {
@@ -16,4 +17,14 @@ module.exports = {
   //       },
   //     ];
   //   },
+=======
+  async rewrites() {
+    return [
+      {
+        source: "/static/:path*",
+        destination: "/fake-coffee-brand-api/static/:path*",
+      },
+    ];
+  },
+>>>>>>> f59c135861d3296e0b610c9ad9a836d710257831
 };
