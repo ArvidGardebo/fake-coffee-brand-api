@@ -12,7 +12,7 @@ module.exports = {
     return [
       {
         source: "/api/:id",
-        destination: "https://fake-coffee-brand-api.vercel.app/api/:id",
+        destination: "https://fake-coffe-api.vercel.app//api/:id",
       },
     ];
   },
