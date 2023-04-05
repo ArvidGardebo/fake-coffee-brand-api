@@ -6,7 +6,7 @@ Fake coffee api is a free online REST API that you can use whenever you need Pse
 
 Our fake coffee api products
 
-- Products https://https://fake-coffee-brand-api.vercel.app/api
+- Products https://fake-coffee-brand-api.vercel.app/api
 
 ## How to use
 
