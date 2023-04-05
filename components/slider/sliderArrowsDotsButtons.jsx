@@ -18,6 +18,7 @@ export const PrevButton = (props) => {
   return (
     <button
       className="embla__button embla__button--prev"
+      button="true"
       onClick={onClick}
       disabled={!enabled}
     >
@@ -45,6 +46,7 @@ export const NextButton = (props) => {
   return (
     <button
       className="embla__button embla__button--next"
+      button="true"
       onClick={onClick}
       disabled={!enabled}
     >

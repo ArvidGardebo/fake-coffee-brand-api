@@ -7,6 +7,7 @@ import { homedir } from "os";
 import { Footer } from "../components/navbar";
 import { useEffect, useState } from "react";
 import Head from "next/head";
+import Image from "next/image";
 
 function Docs() {
   const [products, setProducts] = useState([]);
@@ -41,17 +42,29 @@ function Docs() {
             </div>
           </div>
           <section className={docs.fetchmethods}>
-            {products.map((product, index) => (
-              <FetchMethods
-                key={index}
-                text={product.textall}
-                title={product.getall}
-                code={product.getallcode}
-                instructions={product.install}
-                img_src="Vector.svg"
-                img_alt="A lightning bolt"
-              />
-            ))}
+            {products.length > 0 ? (
+              products.map((product, index) => (
+                <FetchMethods
+                  key={index}
+                  text={product.textall}
+                  title={product.getall}
+                  code={product.getallcode}
+                  instructions={product.install}
+                  img_src="Vector.svg"
+                  img_alt="A lightning bolt"
+                />
+              ))
+            ) : (
+              <div>
+                <span style={{ display: "flex" }}>Loading...</span>
+                <Image
+                  src="/loadingcoffeebean.jpg"
+                  alt="moving coffeebeans"
+                  height={100}
+                  width={100}
+                />
+              </div>
+            )}
             {products.map((product, index) => (
               <FetchMethods
                 key={index}
