@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { PrevButton, NextButton } from "./sliderArrowsDotsButtons";
-import imageByIndex from "./imageByIndex";
 
 const Slider = (props) => {
   const { slides, options } = props;
