@@ -8,12 +8,12 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
 
-  //   async rewrites() {
-  //     return [
-  //       {
-  //         source: "/static/:path*",
-  //         destination: "/fake-coffee-brand-api/static/:path*",
-  //       },
-  //     ];
-  //   },
+  async rewrites() {
+    return [
+      {
+        source: "/api/:id",
+        destination: "https://fake-coffee-brand-api/api/:id",
+      },
+    ];
+  },
 };
