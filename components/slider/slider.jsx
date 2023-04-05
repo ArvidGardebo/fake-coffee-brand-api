@@ -58,14 +58,11 @@ const Slider = (props) => {
           <div className="embla__container">
             {data.map((el, index) => (
               <div className="embla__slide" key={index}>
-                {/* <div className="embla__slide__number">
-                  <span>{index + 1}</span>
-                </div> */}
                 <div className="slide-container">
                   <div className="image-container">
                     <img
                       className="embla__slide__img"
-                      src={imageByIndex(index).src}
+                      src={el.image_url}
                       alt="Your alt text"
                     />
                   </div>
