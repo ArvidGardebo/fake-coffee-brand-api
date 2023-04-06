@@ -1,7 +1,7 @@
 const path = require("path");
 module.exports = {
   publicRuntimeConfig: {
-    staticFolder: "/static",
+    // staticFolder: "/static",
     distDir: "build",
   },
   sassOptions: {
@@ -11,8 +11,8 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: "/static/:path*",
-        destination: "/fake-coffee-brand-api/static/:path*",
+        source: "/api/:id",
+        destination: "https://fake-coffee-brand-api.vercel.app/api/:id",
       },
     ];
   },
