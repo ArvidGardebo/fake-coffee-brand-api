@@ -7,14 +7,12 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+};
+const nextConfig = {
+  i18n: {
+    locales: ["en"],
 
-  async rewrites() {
-    return [
-      {
-        source: "/api/:id",
-        destination: "https://fake-coffee-brand-api.vercel.app/api/:id",
-      },
-    ];
+    defaultLocale: "en",
   },
   async headers() {
     return [
