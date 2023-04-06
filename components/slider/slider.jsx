@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { PrevButton, NextButton } from "./sliderArrowsDotsButtons";
+import global from "../../styles/global.module.scss";
 
 const Slider = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState([]);
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [show, setShow] = useState(false);
 
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
@@ -33,18 +33,20 @@ const Slider = (props) => {
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
     setPrevBtnEnabled(emblaApi.canScrollPrev());
     setNextBtnEnabled(emblaApi.canScrollNext());
-  }, [emblaApi, setSelectedIndex]);
+  }, [emblaApi]);
+
+  const onShowAll = () => {
+    !show ? setShow(true) : setShow(false);
+  };
 
   useEffect(() => {
     if (!emblaApi) return;
     onSelect();
-    setScrollSnaps(emblaApi.scrollSnapList());
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
-  }, [emblaApi, setScrollSnaps, onSelect]);
+  }, [emblaApi, onSelect]);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -75,34 +77,66 @@ const Slider = (props) => {
                         <span className="bold">name:</span>
                         <span>{el.name}</span>
                       </li>
-                      <li id="column">
+                      <li
+                        id="column"
+                        className="mobile-hide"
+                        style={{ display: show ? "block" : "none" }}
+                      >
                         <span className="bold">description:</span>
                         <span>{el.description}</span>
                       </li>
-                      <li>
+                      <li
+                        className="mobile-hide"
+                        style={{ display: show ? "block" : "none" }}
+                      >
                         <span className="bold">price:</span>
                         <span>{el.price}</span>
                       </li>
-                      <li>
+                      <li
+                        className="mobile-hide"
+                        style={{ display: show ? "block" : "none" }}
+                      >
                         <span className="bold">region:</span>
                         <span>{el.region}</span>
                       </li>
-                      <li>
+                      <li
+                        className="mobile-hide"
+                        style={{ display: show ? "block" : "none" }}
+                      >
                         <span className="bold">weight:</span>
                         <span>{el.weight}</span>
                       </li>
-                      <li>
+                      <li
+                        className="mobile-hide"
+                        style={{ display: show ? "block" : "none" }}
+                      >
                         <span className="bold">roast_level:</span>
                         <span>{el.roast_level}</span>
                       </li>
-                      <li id="column">
+                      <li
+                        id="column"
+                        className="mobile-hide"
+                        style={{ display: show ? "block" : "none" }}
+                      >
                         <span className="bold">flavor_profile:</span>
                         <span>[{el.flavor_profile.join(", ")}]</span>
                       </li>
-                      <li id="column">
+                      <li
+                        id="column"
+                        className="mobile-hide"
+                        style={{ display: show ? "block" : "none" }}
+                      >
                         <span className="bold">grind_option:</span>
                         <span>[{el.grind_option.join(", ")}]</span>
                       </li>
+                      <button
+                        className={`btn-show ${
+                          !show ? global.secondaryBtn : global.clickedSecBtn
+                        }`}
+                        onClick={onShowAll}
+                      >
+                        {!show ? "Show output" : "Hide output"}
+                      </button>
                     </ul>
                   </div>
                 </div>
