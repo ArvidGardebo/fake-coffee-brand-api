@@ -16,20 +16,19 @@ export default async function getbyId(req, res) {
       grind_option,
       roast_level,
     } = req.body;
-
     if (req.method === "PUT") {
       const query = {
         id: parseInt(id),
       };
       const update = {};
-      name ? (update.name = name) : "";
-      description ? (update.description = description) : "";
-      price ? (update.price = price) : "";
-      region ? (update.region = region) : "";
-      weight ? (update.weight = weight) : "";
-      flavor_profile ? (update.flavor_profile = flavor_profile) : "";
-      grind_option ? (update.grind_option = grind_option) : "";
-      roast_level ? (update.roast_level = roast_level) : "";
+      name ? (update.name = name) : null;
+      description ? (update.description = description) : null;
+      price ? (update.price = price) : null;
+      region ? (update.region = region) : null;
+      weight ? (update.weight = weight) : null;
+      flavor_profile ? (update.flavor_profile = flavor_profile) : null;
+      grind_option ? (update.grind_option = grind_option) : null;
+      roast_level ? (update.roast_level = roast_level) : null;
       const result = await db.collection("coffee").findOne(query);
 
       if (!result) {
