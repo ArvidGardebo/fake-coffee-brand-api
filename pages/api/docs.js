@@ -1,5 +1,10 @@
+import cors from "cors";
 import { getFetchData } from "../../utils/utils";
 
-export default async function fetchHandler(req, res) {
+const corsOptions = {
+  origin: "https://fake-coffe-api.vercel.app/api",
+};
+
+export default cors(corsOptions)(async function fetchHandler(req, res) {
   await getFetchData(req, res);
-}
+});
