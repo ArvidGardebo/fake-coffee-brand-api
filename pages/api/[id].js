@@ -11,7 +11,7 @@ const allowCors = (fn) => async (req, res) => {
   );
   res.setHeader(
     "Access-Control-Allow-Headers",
-    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Origin"
   );
   if (req.method === "OPTIONS") {
     res.status(200).end();
@@ -24,6 +24,7 @@ async function getbyId(req, res) {
   const { id } = req.query;
   const client = await clientPromise;
   const db = client.db("fake_coffee");
+  const body = JSON.parse(req.body);
 
   try {
     const {
@@ -35,7 +36,8 @@ async function getbyId(req, res) {
       flavor_profile,
       grind_option,
       roast_level,
-    } = req.body;
+    } = body;
+
     if (req.method === "PUT") {
       const query = {
         id: parseInt(id),
@@ -50,6 +52,8 @@ async function getbyId(req, res) {
       grind_option ? (update.grind_option = grind_option) : null;
       roast_level ? (update.roast_level = roast_level) : null;
       const result = await db.collection("coffee").findOne(query);
+
+      console.log(update);
 
       if (!result) {
         res.status(404).json({
