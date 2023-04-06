@@ -78,6 +78,7 @@ async function getbyId(req, res) {
       if (query) {
         const data = await db.collection("coffee").find(query).toArray();
         res.status(200).json(data);
+        return;
       }
     } else if (req.method === "PATCH") {
       const query = {
