@@ -45,8 +45,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto auto;
-    height: 600px;
+    padding: 48px 0;
+    // height: 600px;
 
     .heroImg {
       // background-color: rgba(0, 255, 234, 0.448);
@@ -58,7 +58,7 @@
     .swirl {
       // background-color: rgba(255, 0, 8, 0.448);
       position: absolute;
-      width: 120%;
+      width: 90%;
       height: 120%;
     }
   }
@@ -115,6 +115,10 @@
       .imgContainer {
         width: 400px;
       }
+      .swirl {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
@@ -132,10 +136,6 @@
         height: auto;
         width: 100%;
         .heroImg {
-          width: 100%;
-          height: auto;
-        }
-        .swirl {
           width: 100%;
           height: auto;
         }
@@ -174,5 +174,10 @@
         }
       }
     }
+  }
+}
+@media only screen and (max-width: 999px) {
+  .aboutTextContainer {
+    margin-top: 0px;
   }
 }
