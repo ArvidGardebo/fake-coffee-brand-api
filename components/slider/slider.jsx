@@ -6,7 +6,6 @@ import Image from "next/image";
 
 import global from "../../styles/global.module.scss";
 
-
 const Slider = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
@@ -57,7 +56,7 @@ const Slider = (props) => {
       <div>
         Loading... <span style={{ display: "flex" }}></span>
         <Image
-          src="loadingcoffeebean.jpg"
+          src="/loadingcoffeebean.jpg"
           alt="moving coffeebeans"
           height={100}
           width={100}
