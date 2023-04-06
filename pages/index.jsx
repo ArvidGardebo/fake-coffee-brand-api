@@ -1,23 +1,22 @@
+import Image from "next/image";
+import Link from "next/link";
 import global from "../styles/global.module.scss";
 import home from "../styles/home.module.scss";
-import Navbar from "../components/navbar";
-import { Footer } from "../components/navbar";
-import Image from "next/image";
-import swirl from "../assets/swirl.svg";
-import heroImg from "../assets/images/heroImg.png";
+import docs from "../styles/docs.module.scss";
 
-import arrowDown from "../assets/arrow-down.svg";
-import beans1 from "../assets/beans1.svg";
-import beans2 from "../assets/beans2.svg";
-import beans3 from "../assets/beans3.svg";
+// components
+import Navbar from "../components/navbar";
 import FetchMethods from "../components/fetchMethod";
 import Slider from "../components/slider/slider";
-const OPTIONS = {};
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+import { Footer } from "../components/navbar";
 
-import Link from "next/link";
-import docs from "../styles/docs.module.scss";
+// assets
+import swirl from "../public/swirl.svg";
+import heroImg from "../public/images/heroImg.png";
+import arrowDown from "../public/arrow-down.svg";
+import beans1 from "../public/beans1.svg";
+import beans2 from "../public/beans2.svg";
+import beans3 from "../public/beans3.svg";
 
 function Home() {
   const handleToScroll = (e) => {
@@ -29,8 +28,6 @@ function Home() {
       behavior: "smooth",
     });
   };
-
-  const slides = [{ name: 1 }, { name: 2 }, { name: 3 }];
 
   return (
     <>
@@ -116,7 +113,7 @@ function Home() {
             </div>
             <div className="sandbox">
               <div className="sandbox__carousel">
-                <Slider slides={SLIDES} options={OPTIONS} />
+                <Slider />
               </div>
             </div>
 
