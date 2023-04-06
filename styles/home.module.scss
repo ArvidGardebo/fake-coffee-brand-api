@@ -103,13 +103,14 @@
       gap: 32px;
       width: 400px;
       padding: 0 48px;
+      height: 100%;
       flex-direction: column-reverse;
       .heroTextContainer {
         width: 400px;
         margin: 0 auto;
       }
       .imgContainer {
-        width: 400px;
+        height: 100%;
       }
       .swirl {
         width: 100%;

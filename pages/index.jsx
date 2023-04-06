@@ -123,31 +123,31 @@ function Home() {
   .then((res) => res.json())
   .then((data) => console.log(data));`}
               test={`
-              [
-                {
-                id:1,
-                name:...,
-                description:...,
-                price:...,
-                region:...,
-                weight:...,
-                flavor_profile:...,
-                grind_option:...,
-                roast_level:...,
-                },
-                }
-                {
-                id:2,
-                name:...,
-                description:...,
-                price:...,
-                region:...,
-                weight:...,
-                flavor_profile:...,
-                grind_option:...,
-                roast_level:...,
-                }
-              ]`}
+[
+  { 
+    id:1,
+    name:...,
+    description:...,
+    price:...,
+    region:...,
+    weight:...,
+    flavor_profile:...,
+    grind_option:...,
+    roast_level:...,
+  },
+}
+  {
+    id:2,
+    name:...,
+    description:...,
+    price:...,
+    region:...,
+    weight:...,
+    flavor_profile:...,
+    grind_option:...,
+    roast_level:...,
+  }
+]`}
               img_src="Vector.svg"
               img_alt="Lightning Bolt"
               instructions="Example on how to fetch."
