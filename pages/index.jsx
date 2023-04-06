@@ -122,7 +122,7 @@ function Home() {
 
             <FetchMethods
               title="Get all products."
-              code={`fetch("https://fake-coffee-brand-api.vercel.app/api")
+              code={`fetch("https://fake-coffee-api.vercel.app/api")
   .then((res) => res.json())
   .then((data) => console.log(data));`}
               test={`
