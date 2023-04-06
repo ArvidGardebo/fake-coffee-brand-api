@@ -57,7 +57,7 @@ export default async function updateCoffeefake(req, res) {
     }
 
     //Update one
-    if (req.method === "POST" && req.body.name) {
+    if (req.method === "POST" && JSON.parse(req.body).name) {
       const {
         name,
         description,
@@ -68,6 +68,7 @@ export default async function updateCoffeefake(req, res) {
         grind_option,
         roast_level,
       } = JSON.parse(req.body);
+
       const newCoffee = {
         _id: "6424335b59f9f6fdd657d2e1",
         id: 21,
@@ -82,7 +83,6 @@ export default async function updateCoffeefake(req, res) {
       };
 
       res.status(200).json({ success: true, added: newCoffee });
-
       return;
     } else {
       res.status(405).json({ success: false, message: "Method not allowed" });
