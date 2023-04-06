@@ -164,7 +164,9 @@ function Home() {
               <ul className={home.list}>
                 <li>
                   <span>Products</span>
-                  <a href="">20 Coffee Items</a>
+                  <a href="https://fake-coffe-api.vercel.app/api">
+                    20 Coffee Items
+                  </a>
                 </li>
               </ul>
             </div>

@@ -73,7 +73,7 @@ const Slider = (props) => {
                     <img
                       className="embla__slide__img"
                       src={el.image_url}
-                      alt="Your alt text"
+                      alt="A bag of coffee a brand"
                     />
                   </div>
                   <div className="text-container">
