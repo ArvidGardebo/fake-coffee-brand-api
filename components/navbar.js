@@ -6,7 +6,7 @@ const Navbar = (props) => {
   return (
     <div className={styles.navbar}>
       <nav className={styles.navbarContainer}>
-        <Link href="https://fake-coffe-api.vercel.app/">
+        <Link href="https://fake-coffee-api.vercel.app">
           <img
             className={styles.logo}
             src={props.src}
