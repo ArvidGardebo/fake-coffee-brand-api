@@ -7,3 +7,11 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
 };
+const nextConfig = {
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
+};
+
+module.exports = nextConfig;
