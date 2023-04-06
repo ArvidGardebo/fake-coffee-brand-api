@@ -2,7 +2,7 @@ import cors from "cors";
 import clientPromise from "../../lib/mongodb";
 
 const corsOptions = {
-  origin: "https://fake-coffe-api.vercel.app",
+  origin: "*",
 };
 
 async function getbyId(req, res) {
