@@ -52,7 +52,7 @@ const Slider = (props) => {
       <div>
         Loading... <span style={{ display: "flex" }}></span>
         <Image
-          src="../public/loadingcoffeebean.jpg"
+          src="loadingcoffeebean.jpg"
           alt="moving coffeebeans"
           height={100}
           width={100}
