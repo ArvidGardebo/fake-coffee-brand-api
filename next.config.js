@@ -11,7 +11,6 @@ module.exports = {
 const nextConfig = {
   i18n: {
     locales: ["en"],
-
     defaultLocale: "en",
   },
   async headers() {
@@ -36,3 +35,5 @@ const nextConfig = {
     ];
   },
 };
+
+module.exports = nextConfig;
