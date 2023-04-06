@@ -46,7 +46,7 @@ function Home() {
                   Read Docs
                 </Link>
                 <Link
-                  href="https://github.com/"
+                  href="https://github.com/ArvidGardebo/fake-coffee-brand-api"
                   className={global.secondaryBtn}
                 >
                   View GitHub

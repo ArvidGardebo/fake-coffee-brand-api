@@ -25,7 +25,10 @@ const Navbar = (props) => {
             </Link>
           </li>
           <li className={styles.navbar__item}>
-            <Link className={styles.navbar__link} href="https://github.com/">
+            <Link
+              className={styles.navbar__link}
+              href="https://github.com/ArvidGardebo/fake-coffee-brand-api"
+            >
               Github
             </Link>
           </li>
