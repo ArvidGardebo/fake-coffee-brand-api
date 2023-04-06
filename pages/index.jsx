@@ -161,7 +161,9 @@ function Home() {
               <ul className={home.list}>
                 <li>
                   <span>Products</span>
-                  <a href="">20 Coffee Items</a>
+                  <a href="https://fake-coffe-api.vercel.app/api">
+                    20 Coffee Items
+                  </a>
                 </li>
               </ul>
             </div>
@@ -170,51 +172,39 @@ function Home() {
               <ul className={home.list}>
                 <li>
                   <span>GET</span>
-                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api">
-                    /api
-                  </a>
+                  <a href="https://fake-coffe-api.vercel.app/api">/api</a>
                 </li>
                 <li>
                   <span>GET</span>
-                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api/1">
-                    /api/1
-                  </a>
+                  <a href="https://fake-coffe-api.vercel.app/api/1">/api/1</a>
                 </li>
                 <li>
                   <span>GET</span>
-                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api?limit=5">
+                  <a href="https://fake-coffe-api.vercel.app/api?limit=5">
                     /api?limit=5
                   </a>
                 </li>
                 <li>
                   <span>GET</span>
-                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api?sort=asc">
+                  <a href="https://fake-coffe-api.vercel.app/api?sort=asc">
                     /api?sort=asc
                   </a>
                 </li>
                 <li>
                   <span>POST</span>
-                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api">
-                    /api
-                  </a>
+                  <a href="https://fake-coffe-api.vercel.app/api">/api</a>
                 </li>
                 <li>
                   <span>PUT</span>
-                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api/1">
-                    /api/1
-                  </a>
+                  <a href="https://fake-coffe-api.vercel.app/api/1">/api/1</a>
                 </li>
                 <li>
                   <span>PATCH</span>
-                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api/1">
-                    /api/1
-                  </a>
+                  <a href="https://fake-coffe-api.vercel.app/api/1">/api/1</a>
                 </li>
                 <li>
                   <span>DELETE</span>
-                  <a href="https://vercel.com/joelhols/fake-coffee-brand-api/api/1">
-                    /api/1
-                  </a>
+                  <a href="https://fake-coffe-api.vercel.app/api/1">/api/1</a>
                 </li>
               </ul>
             </div>

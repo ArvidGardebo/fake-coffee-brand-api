@@ -1,5 +1,6 @@
 import clientPromise from "../lib/mongodb";
 
+
 export async function getFetchData(req, res) {
   const client = await clientPromise;
   const db = client.db("fake_coffee");

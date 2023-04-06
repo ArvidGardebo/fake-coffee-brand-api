@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { PrevButton, NextButton } from "./sliderArrowsDotsButtons";
+
+import Image from "next/image";
+
 import global from "../../styles/global.module.scss";
+
 
 const Slider = (props) => {
   const { slides, options } = props;
@@ -49,7 +53,17 @@ const Slider = (props) => {
   }, [emblaApi, onSelect]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        Loading... <span style={{ display: "flex" }}></span>
+        <Image
+          src="loadingcoffeebean.jpg"
+          alt="moving coffeebeans"
+          height={100}
+          width={100}
+        />
+      </div>
+    );
   }
 
   return (
@@ -64,7 +78,7 @@ const Slider = (props) => {
                     <img
                       className="embla__slide__img"
                       src={el.image_url}
-                      alt="Your alt text"
+                      alt="A bag of coffee a brand"
                     />
                   </div>
                   <div className="text-container">

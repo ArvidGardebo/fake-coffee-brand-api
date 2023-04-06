@@ -1,10 +1,9 @@
+require("dotenv").config();
 process.env.NODE_ENV = "development";
 
 const axios = require("axios");
-import { updateCoffeefake } from "../../utils/utils";
 import { MongoClient } from "mongodb";
 import _interopRequireDefault from "@babel/runtime/helpers/interopRequireDefault";
-import { describe } from "node:test";
 
 let connection;
 let db;
@@ -22,7 +21,7 @@ afterAll(async () => {
 });
 
 it("should return coffe data from fetch", async () => {
-  let res = await axios.get("http://localhost:3000/api?sort=desc");
+  let res = await axios.get("https://fake-coffe-api.vercel.app/api?sort=desc");
   expect(res.status).toBe(200);
 
   let data = res.data;
