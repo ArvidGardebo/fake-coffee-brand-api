@@ -24,21 +24,19 @@ async function getbyId(req, res) {
   const { id } = req.query;
   const client = await clientPromise;
   const db = client.db("fake_coffee");
-  const body = JSON.parse(req.body);
 
   try {
-    const {
-      name,
-      description,
-      price,
-      region,
-      weight,
-      flavor_profile,
-      grind_option,
-      roast_level,
-    } = body;
-
     if (req.method === "PUT") {
+      const {
+        name,
+        description,
+        price,
+        region,
+        weight,
+        flavor_profile,
+        grind_option,
+        roast_level,
+      } = JSON.parse(req.body);
       const query = {
         id: parseInt(id),
       };
@@ -81,6 +79,16 @@ async function getbyId(req, res) {
         return;
       }
     } else if (req.method === "PATCH") {
+      const {
+        name,
+        description,
+        price,
+        region,
+        weight,
+        flavor_profile,
+        grind_option,
+        roast_level,
+      } = JSON.parse(req.body);
       const query = {
         id: parseInt(id),
       };
