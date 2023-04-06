@@ -4,7 +4,7 @@ import Navbar from "../components/navbar";
 import { Footer } from "../components/navbar";
 import Image from "next/image";
 import swirl from "../assets/swirl.svg";
-import heroImg from "../public/Frame _58.png";
+import heroImg from "../assets/images/heroImg.png";
 
 import arrowDown from "../assets/arrow-down.svg";
 import beans1 from "../assets/beans1.svg";
@@ -97,9 +97,7 @@ function Home() {
 
         <div className={global.wrapper}>
           <section className={home.aboutSection} id="about">
-            <div
-              className={`${home.aboutTextContainer} ${docs.header_container}`}
-            >
+            <div className={`${home.aboutTextContainer}`}>
               <div className={docs.header_backgroundImg}>
                 <h2>ABOUT THE API</h2>
               </div>
@@ -124,10 +122,9 @@ function Home() {
 
             <FetchMethods
               title="Get all products."
-              code={`
-              fetch("https://fake-coffee-brand-api.vercel.app/api")
-              .then((res) => res.json())
-              .then((data) => console.log(data));`}
+              code={`fetch("https://fake-coffee-brand-api.vercel.app/api")
+  .then((res) => res.json())
+  .then((data) => console.log(data));`}
               test={`
               [
                 {

@@ -12,6 +12,14 @@ Our fake coffee api products
 
 You can fetch data by using..
 
+Don't forget to use..
+
+```bash
+npm install
+```
+
+..after cloning our repository.
+
 ### Get all products
 
 ```js
