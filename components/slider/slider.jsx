@@ -47,7 +47,17 @@ const Slider = (props) => {
   }, [emblaApi, setScrollSnaps, onSelect]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        Loading... <span style={{ display: "flex" }}>Loading...</span>
+        <Image
+          src="/loadingcoffeebean.jpg"
+          alt="moving coffeebeans"
+          height={100}
+          width={100}
+        />
+      </div>
+    );
   }
 
   return (
