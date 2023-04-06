@@ -1,6 +1,5 @@
 import clientPromise from "../lib/mongodb";
 
-
 export async function getFetchData(req, res) {
   const client = await clientPromise;
   const db = client.db("fake_coffee");
@@ -68,7 +67,7 @@ export default async function updateCoffeefake(req, res) {
         flavor_profile,
         grind_option,
         roast_level,
-      } = req.body;
+      } = JSON.parse(req.body);
       const newCoffee = {
         _id: "6424335b59f9f6fdd657d2e1",
         id: 21,
