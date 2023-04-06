@@ -1,11 +1,6 @@
-import cors from "cors";
 import clientPromise from "../../lib/mongodb";
 
-const corsOptions = {
-  origin: "*",
-};
-
-async function getbyId(req, res) {
+export default async function getbyId(req, res) {
   const { id } = req.query;
   const client = await clientPromise;
   const db = client.db("fake_coffee");
@@ -122,5 +117,3 @@ async function getbyId(req, res) {
     res.status(500).json({ message: "Is it a valid JSON object you sent in?" });
   }
 }
-
-export default cors(corsOptions)(getbyId);
