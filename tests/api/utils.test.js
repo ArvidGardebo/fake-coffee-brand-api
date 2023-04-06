@@ -21,7 +21,7 @@ afterAll(async () => {
 });
 
 it("should return coffe data from fetch", async () => {
-  let res = await axios.get("https://fake-coffe-api.vercel.app/api?sort=desc");
+  let res = await axios.get("http://localhost:3000/api?sort=desc");
   expect(res.status).toBe(200);
 
   let data = res.data;
