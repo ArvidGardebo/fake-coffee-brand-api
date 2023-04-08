@@ -100,6 +100,7 @@
     height: auto;
     min-height: auto;
     max-height: auto;
+    padding-bottom: 24px;
     .heroContainer {
       display: flex;
       gap: 32px;
@@ -129,7 +130,6 @@
     width: 100vw;
     .heroContainer {
       width: 100%;
-      padding: 0 24px;
       .heroTextContainer {
         width: auto;
         padding-bottom: 48px;
