@@ -98,6 +98,8 @@
 @media only screen and (max-width: 850px) {
   .heroSection {
     height: auto;
+    min-height: auto;
+    max-height: auto;
     .heroContainer {
       display: flex;
       gap: 32px;
@@ -110,6 +112,7 @@
         width: 400px;
         margin: 0 auto;
       }
+
       .imgContainer {
         height: 100%;
       }
