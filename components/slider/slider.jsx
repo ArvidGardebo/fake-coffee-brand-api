@@ -54,7 +54,7 @@ const Slider = (props) => {
   if (isLoading) {
     return (
       <div>
-        Loading... <span style={{ display: "flex" }}></span>
+        <span style={{ display: "flex" }}>Loading...</span>
         <Image
           src="/loadingcoffeebean.jpg"
           alt="moving coffeebeans"
