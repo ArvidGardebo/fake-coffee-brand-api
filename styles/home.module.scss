@@ -98,17 +98,22 @@
 @media only screen and (max-width: 850px) {
   .heroSection {
     height: auto;
+    min-height: auto;
+    max-height: auto;
+    padding-bottom: 24px;
     .heroContainer {
       display: flex;
       gap: 32px;
       width: 400px;
       padding: 0 48px;
       height: 100%;
+      margin-bottom: 0px;
       flex-direction: column-reverse;
       .heroTextContainer {
         width: 400px;
         margin: 0 auto;
       }
+
       .imgContainer {
         height: 100%;
       }
@@ -125,9 +130,9 @@
     width: 100vw;
     .heroContainer {
       width: 100%;
-      padding: 0 24px;
       .heroTextContainer {
         width: auto;
+        padding-bottom: 48px;
       }
       .imgContainer {
         height: auto;

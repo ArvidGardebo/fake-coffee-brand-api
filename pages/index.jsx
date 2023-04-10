@@ -46,7 +46,7 @@ function Home() {
                   Read Docs
                 </Link>
                 <Link
-                  href="https://github.com/"
+                  href="https://github.com/ArvidGardebo/fake-coffee-brand-api"
                   className={global.secondaryBtn}
                 >
                   View GitHub
@@ -135,7 +135,6 @@ function Home() {
     grind_option:...,
     roast_level:...,
   },
-}
   {
     id:2,
     name:...,
@@ -146,7 +145,7 @@ function Home() {
     flavor_profile:...,
     grind_option:...,
     roast_level:...,
-  }
+  },
 ]`}
               img_src="Vector.svg"
               img_alt="Lightning Bolt"
