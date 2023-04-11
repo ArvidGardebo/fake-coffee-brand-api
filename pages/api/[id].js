@@ -51,8 +51,6 @@ async function getbyId(req, res) {
       roast_level ? (update.roast_level = roast_level) : null;
       const result = await db.collection("coffee").findOne(query);
 
-      console.log(update);
-
       if (!result) {
         res.status(404).json({
           message: "Coffee not found",
