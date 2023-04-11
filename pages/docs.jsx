@@ -1,9 +1,8 @@
-import { domainToASCII } from "url";
 import global from "../styles/global.module.scss";
 import docs from "../styles/docs.module.scss";
 import Navbar from "../components/navbar";
 import FetchMethods from "../components/fetchMethod";
-import { homedir } from "os";
+
 import { Footer } from "../components/navbar";
 import { useEffect, useState } from "react";
 import Head from "next/head";
