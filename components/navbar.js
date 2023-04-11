@@ -49,7 +49,6 @@ export const Footer = (props) => {
       <div className={styles.footer_icons}>
         <div className={styles.footer_built_with}>Built with</div>
         <img src="React.svg" alt="React logo" />
-        <img src="typescript.svg" alt="Typescript logo" />
         <img src="MongoDb.svg" alt="MongoDB logo" />
         <img src="nextjs.svg" alt="Next js Logo" />
       </div>
