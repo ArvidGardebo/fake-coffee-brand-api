@@ -92,13 +92,15 @@ fetch("https://fake-coffee-brand-api.vercel.app/api/1", {
   .then((data) => console.log(data));
 
 /* will return
-{
-id:5,
-name: 'new name',
-description: 'new description'
-price: 'new price',
-region: 'new region'
-}
+[
+  {
+    id:5,
+    name: 'new name',
+    description: 'new description'
+    price: 'new price',
+    region: 'new region'
+  }
+]
 */
 ```
 
@@ -120,13 +122,15 @@ fetch("https://fake-coffee-brand-api.vercel.app/api", {
   .then((data) => console.log(data));
 
 /* will return
-{
-id:21,
-name:'Heavenly Spice',
-description:'Comforting',
-price:89.99,
-region:'South Asia'
-}
+[
+  {
+    id:21,
+    name:'Heavenly Spice',
+    description:'Comforting',
+    price:89.99,
+    region:'South Asia'
+  }
+]
 */
 ```
 
@@ -148,7 +152,6 @@ Nothing will delete on the database.
 
 ```js
 {
-
     id:Number,
     name:String,
     description:String,
