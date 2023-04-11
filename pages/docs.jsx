@@ -8,17 +8,17 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 
-function Docs() {
-  const [products, setProducts] = useState([]);
+const Docs = ({ products }) => {
+  // const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    fetch("/api/docs")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+  // useEffect(() => {
+  //   fetch("/api/docs")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setProducts(data);
+  //     })
+  //     .catch((error) => console.log(error));
+  // }, []);
 
   return (
     <>
@@ -137,5 +137,16 @@ function Docs() {
       <Footer />
     </>
   );
-}
+};
 export default Docs;
+
+export const getStaticProps = async () => {
+  const res = await fetch("https://fake-coffee-api.vercel.app/api/docs");
+  const products = await res.json();
+
+  return {
+    props: {
+      products,
+    },
+  };
+};
