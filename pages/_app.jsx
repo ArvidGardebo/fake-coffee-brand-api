@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
           name="description"
           content="API page that let users get access to data about fake coffee products and information on how to use it"
         />
+        <meta property="og:image" content="https://i.imgur.com/0uA0izQ.png" />
         <title>Fake Coffee Api</title>
       </Head>
       <Component {...pageProps} />
