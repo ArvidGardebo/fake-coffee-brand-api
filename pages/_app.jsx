@@ -14,12 +14,12 @@ function MyApp({ Component, pageProps }) {
       `}</style>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />{" "}
+        <title>Fake Coffee Api</title>
         <meta
           name="description"
           content="API page that let users get access to data about fake coffee products and information on how to use it"
         />
-        <meta property="og:image" content="https://i.imgur.com/0uA0izQ.png" />
-        <title>Fake Coffee Api</title>
+        <meta property="og:image" content="https://i.imgur.com/5DO1bE3.png" />
       </Head>
       <Component {...pageProps} />
     </div>
