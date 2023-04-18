@@ -134,6 +134,7 @@ function Home() {
     flavor_profile:...,
     grind_option:...,
     roast_level:...,
+    image_url:...,
   },
   {
     id:2,
@@ -145,6 +146,7 @@ function Home() {
     flavor_profile:...,
     grind_option:...,
     roast_level:...,
+    image_url:...,
   },
 ]`}
               img_src="Vector.svg"
